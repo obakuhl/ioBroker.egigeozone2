@@ -1,0 +1,149 @@
+{
+  "common": {
+    "name": "egigeozone2",
+    "version": "1.0.0",
+    "news": {
+      "1.0.0": {
+	  "en": "Refactoring",
+	  "de": "Refactoring",
+	  "ru": "Рефакторинг",
+	  "pt": "Refactoring",
+	  "nl": "Refactoring",
+	  "fr": "Refactoration",
+	  "it": "Refactoring",
+	  "es": "Refactoring",
+	  "pl": "Refaktoring",
+	  "uk": "Рефакторинг",
+	  "zh-cn": "正在重构"
+      }
+    },
+    "title": "EgiGeoZone2",
+    "titleLang": {
+      "en": "EgiGeoZone2",
+      "de": "EgiGeoZone2",
+      "ru": "EgiGeoZone2",
+      "pt": "EgiGeoZone2",
+      "nl": "EgiGeoZone2",
+      "fr": "EgiGeoZone2",
+      "it": "EgiGeoZone2",
+      "es": "EgiGeoZone2",
+      "pl": "EgiGeoZone2",
+      "uk": "EgiGeoZone2",
+      "zh-cn": "EgiGeoZone2"
+    },
+    "desc": {
+      "en": "listening for EgiGeoZone events. Based on the location based mobile App (EgiGeoZone)",
+      "de": "Hört auf EgiGeoZone-Ereignisse. Basierend auf der standortbasierten mobilen App (EgiGeoZone)",
+      "ru": "прослушивание событий EgiGeoZone. На основе местоположения мобильного приложения (EgiGeoZone)",
+      "pt": "ouvir eventos EgiGeoZone. Baseado no aplicativo móvel baseado na localização (EgiGeoZone)",
+      "nl": "luisteren naar EgiGeoZone evenementen. Gebaseerd op de mobiele App op locatie (EgiGeoZone)",
+      "fr": "écouter les événements EgiGeoZone. Basé sur l'application mobile basée sur l'emplacement (EgiGeoZone)",
+      "it": "ascoltare gli eventi di EgiGeoZone. Sulla base della posizione basata mobile App (EgiGeoZone)",
+      "es": "escuchar eventos de EgiGeoZone. Basado en la aplicación móvil basada en la ubicación (EgiGeoZone)",
+      "pl": "słuchanie EgiGeoZone. Na podstawie lokalizacji aplikacji mobilnej (EgiGeoZone)",
+      "uk": "прослуховування подій EgiGeoZone. На основі місцезнаходження на основі мобільного додатку (EgiGeoZone)",
+      "zh-cn": "聆听EgiGeoZone事件。 基于基于位置的移动App(EgiGeoZone)"
+    },
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "icon": "egigeozone.png",
+    "extIcon": "https://raw.githubusercontent.com/obakuhl/ioBroker.egigeozone2/master/admin/egigeozone.png",
+    "readme": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
+    "license": "MIT",
+    "type": "geoposition",
+    "keywords": [
+      "server",
+      "egigeozone",
+      "mobile app"
+    ],
+    "loglevel": "info",
+    "enabled": true,
+    "localLink": "http://%ip%:%port%",
+    "messagebox": true,
+    "subscribe": "messagebox",
+    "authors": [
+      "test"
+    ],
+    "connectionType": "cloud",
+    "dataSource": "push",
+    "tier": 2,
+    "compact": true,
+    "dependencies": [
+      {
+        "js-controller": ">=2.0.0"
+      }
+    ],
+    "plugins": {
+      "sentry": {
+        "dsn": ""
+      }
+    },
+    "adminUI": {
+      "config": "json"
+    }
+  },
+  "native": {
+    "activate_server": true,
+    "bind": "0.0.0.0",
+    "port": 7999,
+    "ssl": false,
+    "user": "geo",
+    "pass": "geo",
+    "atHome": "Home",
+    "certPrivate": "",
+    "certPublic": "",
+    "certChained": ""
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Server Adapter is ready to get data",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "atHome",
+      "type": "state",
+      "common": {
+        "name": "atHome",
+        "type": "string",
+        "role": "state",
+        "read": true,
+        "write": false,
+        "def": "",
+        "desc": "Present persons"
+      },
+      "native": {}
+    },
+    {
+      "_id": "atHomeCount",
+      "type": "state",
+      "common": {
+        "name": "atHomeCount",
+        "type": "number",
+        "role": "state",
+        "read": true,
+        "write": false,
+        "def": 0,
+        "desc": "Number of present persons"
+      },
+      "native": {}
+    }
+  ]
+}

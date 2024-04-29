@@ -1,0 +1,17 @@
+{
+    "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (waar [Person] de naam zal zijn waarmee de locatie zal worden geassocieerd)",
+    "Profilname -> as desired": "Profilnaam -> naar wens",
+    "Create new server profile with the following values:": "Maak een nieuw serverprofiel aan met de volgende waarden:",
+    "Download App 'EgiGeoZone' for your device (only Android)": "EgiGeoZone downloaden voor uw apparaat",
+    "For any new location -> properties -> settings:": "Voor elke nieuwe locatie -> eigenschappen -> webhook-instellingen:",
+    "EgiGeoZone is listening for events on this port": "Geofence luistert naar gebeurtenissen op deze poort",
+    "EgiGeoZone mobile app": "Mobiele EgiGeoZone-app",
+    "Set username and password for authentication of your EgiGeoZone device. Use the same values in your mobile app settings.": "Stel gebruikersnaam en wachtwoord in voor authenticatie van uw EgiGeoZone-apparaat. Gebruik dezelfde waarden in de instellingen van uw mobiele app.",
+    "activate_server": "Server activeren",
+    "atHome": "Naam van huis",
+    "password": "Wachtwoord",
+    "port": "Haven",
+    "ssl": "Gebruik SSL (https://)",
+    "user": "Gebruiker",
+    "ignoreLeaving": "Vertrekken negeren"
+}

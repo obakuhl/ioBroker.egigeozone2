@@ -1,0 +1,17 @@
+{
+    "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL Fhem Geofancy - > http(s)://[iobore-address]:[port]/[Person](地点[个人]将作为地名)",
+    "Profilname -> as desired": "教授名 -> 按要求",
+    "Create new server profile with the following values:": "创建新服务器配置文件, 数值如下:",
+    "Download App 'EgiGeoZone' for your device (only Android)": "为您的设备下载地理围栏",
+    "For any new location -> properties -> settings:": "对于任何新位置 -> 属性 -> webhook 设置：",
+    "EgiGeoZone is listening for events on this port": "EgiGeoZone 正在侦听此端口上的事件",
+    "EgiGeoZone mobile app": "地理围栏移动应用",
+    "Set username and password for authentication of your EgiGeoZone device. Use the same values in your mobile app settings.": "设置用户名和密码以验证您的地理围栏设备。在您的移动应用程序设置中使用相同的值。",
+    "activate_server": "激活服务器",
+    "atHome": "房屋名称",
+    "password": "密码",
+    "port": "港口",
+    "ssl": "使用 SSL (https://)",
+    "user": "用户",
+    "ignoreLeaving": "忽略离开"
+}
