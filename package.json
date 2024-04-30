@@ -1,6 +1,6 @@
 {
   "name": "iobroker.egigeozone2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "egigeozone adapter for ioBroker",
   "author": "obakuhl <hello@obakuhl.com>",
   "contributors": [
@@ -15,8 +15,11 @@
     "type": "git",
     "url": "https://github.com/obakuhl/ioBroker.egigeozone2"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "dependencies": {
-    "@iobroker/adapter-core": "^2.6.7"
+    "@iobroker/adapter-core": "^3.1.4"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^3.5.9",

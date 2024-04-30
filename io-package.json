@@ -1,9 +1,22 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
-      "1.0.0": {
+      "1.0.1": {
+	  "en": "Minor bugfixes",
+	  "de": "Kleine Verbesserungen",
+	  "ru": "Незначительные исправления",
+	  "pt": "Pequenas correções de bugs",
+	  "nl": "Kleine bugfixes",
+	  "fr": "Corrections mineures",
+	  "it": "Minor bugfix",
+	  "es": "Fixes menores",
+	  "pl": "Niewielkie poprawki",
+	  "uk": "Виправлення помилок",
+	  "zh-cn": "次要错误修正"
+      },    
+	  "1.0.0": {
 	  "en": "Refactoring",
 	  "de": "Refactoring",
 	  "ru": "Рефакторинг",
@@ -17,7 +30,6 @@
 	  "zh-cn": "正在重构"
       }
     },
-    "title": "EgiGeoZone2",
     "titleLang": {
       "en": "EgiGeoZone2",
       "de": "EgiGeoZone2",
@@ -49,20 +61,30 @@
     "icon": "egigeozone.png",
     "extIcon": "https://raw.githubusercontent.com/obakuhl/ioBroker.egigeozone2/master/admin/egigeozone.png",
     "readme": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
-    "license": "MIT",
+    "licenseInformation": {
+		"type": "free",
+		"license": "MIT"
+	},
     "type": "geoposition",
     "keywords": [
       "server",
       "egigeozone",
-      "mobile app"
+      "mobile app",
+	  "geofencing"
     ],
     "loglevel": "info",
     "enabled": true,
-    "localLink": "http://%ip%:%port%",
+	"localLinks": {
+        "_default": {
+            "link": "http://%ip%:%port%",
+            "pro": true
+        }
+    },
+	
     "messagebox": true,
     "subscribe": "messagebox",
     "authors": [
-      "test"
+		"obakuhl <hello@obakuhl.com>"
     ],
     "connectionType": "cloud",
     "dataSource": "push",
@@ -89,10 +111,7 @@
     "ssl": false,
     "user": "geo",
     "pass": "geo",
-    "atHome": "Home",
-    "certPrivate": "",
-    "certPublic": "",
-    "certChained": ""
+    "atHome": "Home"
   },
   "objects": [],
   "instanceObjects": [
