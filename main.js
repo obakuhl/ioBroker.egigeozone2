@@ -242,7 +242,7 @@ async function setStates(user, reqData) {
 		await adapter.setStateAsync(`${user}.json`, JSON.stringify(reqData), true);
     } else {
 		await adapter.setStateAsync(`${user}.changed`, {val: ts, ack: true});
-		await adapter.setStateAsync(`${user}.location`, "");
+		await adapter.setStateAsync(`${user}.location`, {val: "", ack: true});
     }
 }
 

@@ -38,6 +38,10 @@ protocol://address:port/person
 
 ## Changelog
 
+### 1.0.1
+* (obakuhl) Resolved minor issue when leaving location 
+* (obakuhl) Raised minimum version of adapter-core to 3.1.4 and node >= 18
+
 ### 1.0.0
 * (obakuhl) Refactoring
 * (obakuhl) New name (ioBroker.egigeozone -> ioBroker.egigeozone2) necessary due to npm collaborators settings of [previous adapter ioBroker.egigeozone](https://github.com/BasGo/ioBroker.egigeozone)

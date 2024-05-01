@@ -1,9 +1,22 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
-      "1.0.0": {
+      "1.0.1": {
+	  "en": "Resolved minor issue when leaving location\nRaised minimum version of adapter-core to 3.1.4 and node >= 18",
+	  "de": "Kleines Problem beim Verlassen des Standorts behoben\nMindestversion von adapter-core auf 3.1.4 und Node >= 18 angehoben",
+	  "ru": "Устраненная незначительная проблема при выходе из места расположения\n 3.1.4 и узел >= 18",
+	  "pt": "Problema menor resolvido ao sair da localização\n Versão mínima aumentada do adaptador-core para 3.1.4 e node >= 18",
+	  "nl": "Klein probleem opgelost bij het verlaten van locatie\n met een vermogen van meer dan 750 W 18",
+	  "fr": "Problème mineur résolu en quittant l'emplacement\n Version minimale relevée de l'adaptateur-core à 3.1.4 et noeud >= 18",
+	  "it": "Risolto problema minore quando si lascia la posizione\n Versione minima aggiornata di adattatore-core a 3.1.4 e nodo >= 18",
+	  "es": "Problema menor resuelto al salir de la ubicación\n Versión mínima actualizada de adaptador-core a 3.1.4 y nodo >= 18",
+	  "pl": "Rozwiązanie drobnych problemów przy opuszczaniu lokalizacji\n Zwiększona minimalna wersja adaptera rdzenia do 3.1.4 i węzła > = 18",
+	  "uk": "Вирішений незначний номер при виїзді місця\n Переглянуто мінімальну версію адаптера до 3.1.4 та вершини >= 18 років",
+	  "zh-cn": "离开位置时解决的小问题\n 将适配器核心的最低版本提高到3.1.4和节点QQ 第 18 条"
+      },    
+	  "1.0.0": {
 	  "en": "Refactoring",
 	  "de": "Refactoring",
 	  "ru": "Рефакторинг",
@@ -17,7 +30,6 @@
 	  "zh-cn": "正在重构"
       }
     },
-    "title": "EgiGeoZone2",
     "titleLang": {
       "en": "EgiGeoZone2",
       "de": "EgiGeoZone2",
@@ -49,20 +61,30 @@
     "icon": "egigeozone.png",
     "extIcon": "https://raw.githubusercontent.com/obakuhl/ioBroker.egigeozone2/master/admin/egigeozone.png",
     "readme": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
-    "license": "MIT",
+    "licenseInformation": {
+		"type": "free",
+		"license": "MIT"
+	},
     "type": "geoposition",
     "keywords": [
       "server",
       "egigeozone",
-      "mobile app"
+      "mobile app",
+	  "geofencing"
     ],
     "loglevel": "info",
     "enabled": true,
-    "localLink": "http://%ip%:%port%",
+	"localLinks": {
+        "_default": {
+            "link": "http://%ip%:%port%",
+            "pro": true
+        }
+    },
+	
     "messagebox": true,
     "subscribe": "messagebox",
     "authors": [
-      "test"
+		"obakuhl <hello@obakuhl.com>"
     ],
     "connectionType": "cloud",
     "dataSource": "push",
@@ -89,10 +111,7 @@
     "ssl": false,
     "user": "geo",
     "pass": "geo",
-    "atHome": "Home",
-    "certPrivate": "",
-    "certPublic": "",
-    "certChained": ""
+    "atHome": "Home"
   },
   "objects": [],
   "instanceObjects": [
