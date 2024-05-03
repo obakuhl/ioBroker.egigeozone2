@@ -38,6 +38,9 @@ protocol://address:port/person
 
 ## Changelog
 
+### 1.0.2
+* (obakuhl) Updating dependencies
+
 ### 1.0.1
 * (obakuhl) Resolved minor issue when leaving location 
 * (obakuhl) Raised minimum version of adapter-core to 3.1.4 and node >= 18
