@@ -1,9 +1,22 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "news": {
-      "1.0.1": {
+	"1.0.2": {
+	  "en": "Updating dependencies",
+	  "de": "Aktualisierung von Abhängigkeiten",
+	  "ru": "Удаление зависимостей",
+	  "pt": "Atualizar dependências",
+	  "nl": "Afhankelijkheden bijwerken",
+	  "fr": "Mise à jour des dépendances",
+	  "it": "Aggiornare le dipendenze",
+	  "es": "Actualización de las dependencias",
+	  "pl": "Aktualizacja zależności",
+	  "uk": "Оновлення залежності",
+	  "zh-cn": "更新依赖关系"
+      }, 
+	"1.0.1": {
 	  "en": "Resolved minor issue when leaving location\nRaised minimum version of adapter-core to 3.1.4 and node >= 18",
 	  "de": "Kleines Problem beim Verlassen des Standorts behoben\nMindestversion von adapter-core auf 3.1.4 und Node >= 18 angehoben",
 	  "ru": "Устраненная незначительная проблема при выходе из места расположения\n 3.1.4 и узел >= 18",
@@ -16,7 +29,7 @@
 	  "uk": "Вирішений незначний номер при виїзді місця\n Переглянуто мінімальну версію адаптера до 3.1.4 та вершини >= 18 років",
 	  "zh-cn": "离开位置时解决的小问题\n 将适配器核心的最低版本提高到3.1.4和节点QQ 第 18 条"
       },    
-	  "1.0.0": {
+	"1.0.0": {
 	  "en": "Refactoring",
 	  "de": "Refactoring",
 	  "ru": "Рефакторинг",
