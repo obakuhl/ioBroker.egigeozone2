@@ -93,7 +93,6 @@
             "pro": true
         }
     },
-	
     "messagebox": true,
     "subscribe": "messagebox",
     "authors": [
@@ -105,7 +104,12 @@
     "compact": true,
     "dependencies": [
       {
-        "js-controller": ">=2.0.0"
+        "js-controller": ">=5.0.19"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.13.16"
       }
     ],
     "plugins": {
