@@ -52,6 +52,8 @@ protocol://address:port/person
 ## License
 This adapter is licensed under the [MIT license](../blob/master/LICENSE) which is part of this repository.
 
+Copyright (c) 2024 obakuhl <hello@obakuhl.com>
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -72,5 +74,3 @@ SOFTWARE.
 
 ## Credits
 The implementation is mostly based on dschaedl's [ioBroker.geofency](https://github.com/ioBroker/ioBroker.geofency) & BasGo's [ioBroker.egigeozone](https://github.com/BasGo/ioBroker.egigeozone) adapter. The logo has been taken from [Free Icons PNG](http://www.freeiconspng.com/images/maps-icon) and has been modified to have a transparent background.
-
-Copyright (c) 2024 obakuhl <hello@obakuhl.com>
