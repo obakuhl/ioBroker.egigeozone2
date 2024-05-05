@@ -74,7 +74,6 @@
     "icon": "egigeozone.png",
     "extIcon": "https://raw.githubusercontent.com/obakuhl/ioBroker.egigeozone2/master/admin/egigeozone.png",
     "readme": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
-    "license": "MIT",
     "licenseInformation": {
 		"type": "free",
 		"license": "MIT"
