@@ -72,3 +72,5 @@ SOFTWARE.
 
 ## Credits
 The implementation is mostly based on dschaedl's [ioBroker.geofency](https://github.com/ioBroker/ioBroker.geofency) & BasGo's [ioBroker.egigeozone](https://github.com/BasGo/ioBroker.egigeozone) adapter. The logo has been taken from [Free Icons PNG](http://www.freeiconspng.com/images/maps-icon) and has been modified to have a transparent background.
+
+Copyright (c) 2024 obakuhl <hello@obakuhl.com>
