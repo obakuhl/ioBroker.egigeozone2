@@ -115,7 +115,7 @@
     ],
     "plugins": {
       "sentry": {
-        "dsn": ""
+        "dsn": "https://3b07484534f087c2e7fe38b52ae4bb8b@o4507203554836480.ingest.de.sentry.io/4507203585048656"
       }
     },
     "adminUI": {
