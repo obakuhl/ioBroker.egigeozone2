@@ -5,7 +5,7 @@
 ![Number of Installations](http://iobroker.live/badges/egigeozone2-stable.svg)
 [![NPM version](https://img.shields.io/npm/v/iobroker.egigeozone2.svg)](https://www.npmjs.com/package/iobroker.egigeozone2)
 
-![Test and Release](https://github.com/ioBroker/ioBroker.egigeozone2/workflows/Test%20and%20Release/badge.svg)
+![Test and Release](https://github.com/obakuhl/ioBroker.egigeozone2/actions/workflows/test-and-release.yml)
 [![Translation status](https://weblate.iobroker.net/widgets/adapters/-/egigeozone2/svg-badge.svg)](https://weblate.iobroker.net/engage/adapters/?utm_source=widget)
 [![Downloads](https://img.shields.io/npm/dm/iobroker.egigeozone2.svg)](https://www.npmjs.com/package/iobroker.egigeozone2)
 
