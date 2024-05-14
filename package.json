@@ -1,6 +1,6 @@
 {
   "name": "iobroker.egigeozone2",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "egigeozone adapter for ioBroker",
   "author": "obakuhl <hello@obakuhl.com>",
   "contributors": [
