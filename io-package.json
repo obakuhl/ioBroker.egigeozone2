@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "news": {
+	"1.0.3": {
+	  "en": "Updating dependencies",
+	  "de": "Aktualisierung von Abhängigkeiten",
+	  "ru": "Удаление зависимостей",
+	  "pt": "Atualizar dependências",
+	  "nl": "Afhankelijkheden bijwerken",
+	  "fr": "Mise à jour des dépendances",
+	  "it": "Aggiornare le dipendenze",
+	  "es": "Actualización de las dependencias",
+	  "pl": "Aktualizacja zależności",
+	  "uk": "Оновлення залежності",
+	  "zh-cn": "更新依赖关系"
+      }, 
 	"1.0.2": {
 	  "en": "Updating dependencies",
 	  "de": "Aktualisierung von Abhängigkeiten",
@@ -93,8 +106,6 @@
             "pro": true
         }
     },
-    "messagebox": true,
-    "subscribe": "messagebox",
     "authors": [
 		"obakuhl <hello@obakuhl.com>"
     ],
