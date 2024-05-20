@@ -38,6 +38,9 @@ protocol://address:port/person
 
 ## Changelog
 
+### 1.0.4
+* (obakuhl) Password encryption active, minor code improvements
+
 ### 1.0.3
 * (obakuhl) Updating dependencies
 
