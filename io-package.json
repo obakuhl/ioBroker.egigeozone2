@@ -106,7 +106,9 @@
             "pro": true
         }
     },
-    "messagebox": true,
+    "supportedMessages": {
+	"custom": true
+    },
     "authors": [
 		"obakuhl <hello@obakuhl.com>"
     ],
