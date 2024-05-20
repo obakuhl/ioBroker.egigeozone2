@@ -12,7 +12,7 @@
 
 const utils       = require('@iobroker/adapter-core'); // Get common adapter utils
 const adapterName = require('./package.json').name.split('.').pop();
-const url = require('url');
+const url 	  = require('node:url');
 
 let webServer =  null;
 let activateServer = false;
