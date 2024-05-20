@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "news": {
+	"1.0.4": {
+	  "en": "Password encryption active, minor code improvements",
+	  "de": "Passwortverschlüsselung aktiv, kleinere Codeverbesserungen",
+	  "ru": "Активное шифрование пароля, незначительные улучшения кода",
+	  "pt": "Criptografia de senha ativa, pequenas melhorias de código",
+	  "nl": "Wachtwoord encryptie actief, kleine code verbeteringen",
+	  "fr": "Chiffrement du mot de passe actif, améliorations mineures du code",
+	  "it": "Crittografia di password attiva, miglioramenti di codice minori",
+	  "es": "Cifrado de contraseña activo, mejoras menores de código",
+	  "pl": "Hasło szyfrowanie aktywne, drobne ulepszenia kodu",
+	  "uk": "Захист паролів активні, незначні покращення коду",
+	  "zh-cn": "密码加密活动, 小代码改进"
+      }, 
 	"1.0.3": {
 	  "en": "Updating dependencies",
 	  "de": "Aktualisierung von Abhängigkeiten",
@@ -133,7 +146,61 @@
     },
     "adminUI": {
       "config": "json"
-    }
+    },
+    "messages": [
+      {
+        "condition": {
+          "operand": "and",
+          "rules": [
+            "oldVersion<=1.0.3",
+            "newVersion>=1.0.4"
+          ]
+        },
+        "title": {
+          "en": "Important notice!",
+          "de": "Wichtiger Hinweis!",
+          "ru": "Важное замечание!",
+          "pt": "Notícia importante!",
+          "nl": "Belangrijke mededeling!",
+          "fr": "Avis important!",
+          "it": "Avviso IMPORTANTE!",
+          "es": "Noticia importante!",
+          "pl": "Ważna uwaga!",
+          "zh-cn": "重要通知!"
+        },
+        "text": {
+	  "en": "As password encryption has been activated, the password must be entered again in the settings.",
+	  "de": "Da die Passwortverschlüsselung aktiviert wurde, muss das Kennwort in den Einstellungen erneut eingegeben werden.",
+	  "ru": "Поскольку шифрование паролей активировано, пароль должен быть введен снова в настройках.",
+	  "pt": "Como a criptografia de senha foi ativada, a senha deve ser inserida novamente nas configurações.",
+	  "nl": "Aangezien wachtwoordencryptie is geactiveerd, moet het wachtwoord opnieuw worden ingevoerd in de instellingen.",
+	  "fr": "Comme le chiffrement du mot de passe a été activé, le mot de passe doit être à nouveau entré dans les paramètres.",
+	  "it": "Poiché la crittografia della password è stata attivata, la password deve essere nuovamente inserita nelle impostazioni.",
+	  "es": "Como se ha activado el cifrado de contraseñas, la contraseña debe introducirse de nuevo en los ajustes.",
+	  "pl": "Po uruchomieniu szyfrowania hasła, hasło musi być ponownie wprowadzone do ustawień.",
+	  "uk": "Як активовано шифрування пароля, пароль потрібно вводити знову в налаштуваннях.",
+	  "zh-cn": "由于密码加密已经激活,必须在设置中再次输入密码."
+        },
+        "link": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
+        "level": "warn",
+        "linkText": {
+          "en": "Readme",
+          "de": "Liesmich",
+          "ru": "Прочти меня",
+          "pt": "Leia-me",
+          "nl": "Leesmij",
+          "fr": "Lisez-moi",
+          "it": "Leggimi",
+          "es": "Léame",
+          "pl": "Readme",
+          "zh-cn": "自述文件"
+        },
+        "buttons": [
+          "agree",
+          "cancel"
+        ]
+      }
+    ]
   },
   "native": {
     "activate_server": true,
@@ -144,6 +211,12 @@
     "pass": "geo",
     "atHome": "Home"
   },
+  "encryptedNative": [
+    "pass"
+  ],
+  "protectedNative": [
+    "pass"
+  ],
   "objects": [],
   "instanceObjects": [
     {
