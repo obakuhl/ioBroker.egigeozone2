@@ -256,7 +256,7 @@ async function createObjects(user, reqData) {
     });
 
     let obj = {
-        type: 'date',
+        type: 'state',
         common: {name: 'changed', read: true, write: false, type: 'string'},
         native: {user}
     };
@@ -280,7 +280,7 @@ async function createObjects(user, reqData) {
     };
     await adapter.extendObjectAsync(`${user}.lastLongitude`, obj);
     obj = {
-        type: 'json',
+        type: 'state',
         common: {name: 'json', read: true, write: false, role: 'json', type: 'string'},
         native: {user}
     };
