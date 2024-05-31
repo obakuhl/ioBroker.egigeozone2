@@ -47,10 +47,10 @@ function main() {
 
     if (activateServer) {
         adapter.config.port = parseInt(adapter.config.port, 10);
-        if (adapter.config.ssl) {
+/*        if (adapter.config.ssl) {
             // subscribe on changes of permissions
-            adapter.subscribeForeignObjects('system.group.*');
-            adapter.subscribeForeignObjects('system.user.*');
+            //adapter.subscribeForeignObjects('system.group.*');
+            //adapter.subscribeForeignObjects('system.user.*');
 
             if (!adapter.config.certPublic) {
                 adapter.config.certPublic = 'defaultPublic';
@@ -65,9 +65,9 @@ function main() {
                 adapter.config.leConfig     = leConfig;
                 webServer = initWebServer(adapter.config);
             });
-        } else {
+        } else {*/
             webServer = initWebServer(adapter.config);
-        }
+//        }
     } else {
         adapter.setState('info.connection', true, true);
     }
@@ -173,33 +173,31 @@ function requestProcessor(req, res) {
 
         const user = (parsedUrl.pathname.slice(1)).replace(adapter.FORBIDDEN_CHARS, '_').replace(/\s|\./g, '_');
 
-		(async() => {
-		try {
-		   const reqData = parsedUrl.query;
-			
-		   adapter.log.debug(`Analyzed request data: ${JSON.stringify(reqData)}`);
-					
-		   await handleRequest(user, reqData);
-		} catch (err) {
-		   adapter.log.info(`Could not process request for user ${user}: ${err}`);
-		   res.writeHead(500);
-		   res.write('Request error');
-		   res.end();
-		   return;
-		}
-
-		adapter.log.debug(`request user: ${user}`);
-
-		res.writeHead(200);
-		res.write("OK");
-		res.end();
-		
-		})();
-	} else {
+	(async() => {
+            try {
+		const reqData = parsedUrl.query;
+		//log analyzed data
+		adapter.log.debug(`Analyzed request data: ${JSON.stringify(reqData)}`);		
+		await handleRequest(user, reqData);
+            } catch (err) {
+		adapter.log.info(`Could not process request for user ${user}: ${err}`);
 		res.writeHead(500);
-		res.write("Request error");
+		res.write('Request error');
 		res.end();
-	}
+		return;
+            }
+            //log requested user
+            adapter.log.debug(`request user: ${user}`);
+	
+            res.writeHead(200);
+            res.write("OK");
+            res.end();
+	})();
+    } else {
+	res.writeHead(500);
+	res.write("Request error");
+	res.end();
+    }
 }
 
 async function handleRequest(user, reqData) {
@@ -211,71 +209,71 @@ async function handleRequest(user, reqData) {
     const msg = (reqData.entry == "1") ? "entered" : "left";
     adapter.log.info(`Location changed: ${user} ${msg} ${reqData.name}`);
 
-	// create states
-	if (!objectsInitialized[user]) {
-		await createObjects(user, reqData);
-		objectsInitialized[user] = true;
-	}
-	await setStates(user, reqData);
-	await setAtHome(user, reqData);
+    // create states
+    if (!objectsInitialized[user]) {
+	await createObjects(user, reqData);
+	objectsInitialized[user] = true;
+    }
+    await setStates(user, reqData);
+    await setAtHome(user, reqData);
 }
 
 const stateAtHomeCount = 'atHomeCount';
 const stateAtHome = 'atHome';
 
 async function setStates(user, reqData) {
-	let entry = reqData.entry;
+    let entry = reqData.entry;
     if (entry !== undefined) {
         entry = !!parseInt(entry, 10);
     }
 	
-	adapter.setState(user, {val: entry, ack: true});
+    adapter.setState(user, {val: entry, ack: true});
 	
     const ts = adapter.formatDate(new Date(reqData.date), 'YYYY-MM-DD hh:mm:ss');
 
     if (reqData.entry == "1")
     {		
-		await adapter.setStateAsync(`${user}.changed`, {val: ts, ack: true});
-		await adapter.setStateAsync(`${user}.location`, {val: reqData.name, ack: true});
-		await adapter.setStateAsync(`${user}.lastLatitude`, {val: reqData.latitude, ack: true});
-		await adapter.setStateAsync(`${user}.lastLongitude`, {val: reqData.longitude, ack: true});
-		await adapter.setStateAsync(`${user}.json`, JSON.stringify(reqData), true);
+	await adapter.setStateAsync(`${user}.changed`, {val: ts, ack: true});
+	await adapter.setStateAsync(`${user}.location`, {val: reqData.name, ack: true});
+	await adapter.setStateAsync(`${user}.lastLatitude`, {val: reqData.latitude, ack: true});
+	await adapter.setStateAsync(`${user}.lastLongitude`, {val: reqData.longitude, ack: true});
+	await adapter.setStateAsync(`${user}.json`, JSON.stringify(reqData), true);
     } else {
-		await adapter.setStateAsync(`${user}.changed`, {val: ts, ack: true});
-		await adapter.setStateAsync(`${user}.location`, {val: "", ack: true});
+	await adapter.setStateAsync(`${user}.changed`, {val: ts, ack: true});
+	await adapter.setStateAsync(`${user}.location`, {val: "", ack: true});
     }
 }
 
 async function createObjects(user, reqData) {
     // create all Objects
-	adapter.log.debug(`Creating objects for "${user}"`);
+    adapter.log.debug(`Creating objects for "${user}"`);
     await adapter.extendObjectAsync(user, {
-        type: 'device',
-        common: {name: user, type: 'boolean'}, //why boolean, it is a folder
-        native: {name: user, device: reqData.device}
+	type: 'device',
+	common: {name: user, role: 'state', type: 'boolean'}, //why boolean, it is a folder
+	native: {name: user, device: reqData.device}
     });
 
     let obj = {
         type: 'state',
-        common: {name: 'changed', read: true, write: false, type: 'string'},
+        common: {name: 'changed', read: true, write: false, role: 'date', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.changed`, obj);
     obj = {
         type: 'state',
-        common: {name: 'location', read: true, write: false, type: 'string'},
+        common: {name: 'location', read: true, write: false, role: 'location', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.location`, obj);	
     obj = {
         type: 'state',
-        common: {name: 'lastLatitude', read: true, write: false, type: 'string'},
+        common: {name: 'lastLatitude', read: true, write: false, role: 'value.gps.latitude', type: 'number'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.lastLatitude`, obj);
     obj = {
         type: 'state',
-        common: {name: 'lastLongitude', read: true, write: false, type: 'string'},
+        common: {name: 'lastLongitude', read: true, write: false, role: 'value.gps.longitude', type: 'number'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.lastLongitude`, obj);
