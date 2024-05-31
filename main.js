@@ -267,13 +267,13 @@ async function createObjects(user, reqData) {
     await adapter.extendObjectAsync(`${user}.location`, obj);	
     obj = {
         type: 'state',
-        common: {name: 'lastLatitude', read: true, write: false, role: 'value.gps.latitude', type: 'number'},
+        common: {name: 'lastLatitude', read: true, write: false, role: 'value.gps.latitude', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.lastLatitude`, obj);
     obj = {
         type: 'state',
-        common: {name: 'lastLongitude', read: true, write: false, role: 'value.gps.longitude', type: 'number'},
+        common: {name: 'lastLongitude', read: true, write: false, role: 'value.gps.longitude', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.lastLongitude`, obj);
