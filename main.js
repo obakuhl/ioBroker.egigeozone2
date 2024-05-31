@@ -47,7 +47,7 @@ function main() {
 
     if (activateServer) {
         adapter.config.port = parseInt(adapter.config.port, 10);
-/*        if (adapter.config.ssl) {
+        if (adapter.config.ssl) {
             // subscribe on changes of permissions
             //adapter.subscribeForeignObjects('system.group.*');
             //adapter.subscribeForeignObjects('system.user.*');
@@ -65,9 +65,9 @@ function main() {
                 adapter.config.leConfig     = leConfig;
                 webServer = initWebServer(adapter.config);
             });
-        } else {*/
+        } else {
             webServer = initWebServer(adapter.config);
-//        }
+        }
     } else {
         adapter.setState('info.connection', true, true);
     }
