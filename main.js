@@ -16,7 +16,6 @@ const EgiGeoZoneWebServer = require('@iobroker/webserver');
 const url = require('node:url');
 
 let webServer =  null;
-let store = null;
 let activateServer = false;
 let adapter;
 const objectsInitialized = {};
