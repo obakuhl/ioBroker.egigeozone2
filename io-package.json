@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "news": {
+	"1.0.5": {
+	  "en": "Switched to new `@iobroker/webserver`",
+	  "de": "Verwendung von `@iobroker/webserver` implementiert",
+	  "ru": "Переключение на новый `@iobroker/webserver`",
+	  "pt": "Mudado para novo `@iobroker/webserver`",
+	  "nl": "Overgeschakeld naar nieuwe `@iobroker/webserver` Wat",
+	  "fr": "Passé au nouveau `@iobroker/webserver`",
+	  "it": "Passato al nuovo `@iobroker/webserver`",
+	  "es": "Conmutado a nuevo `@iobroker/webserver `",
+	  "pl": "Przełączono na nowy `@iobroker/webserver`",
+	  "uk": "Вимкнено новий `@iobroker/webserver` й",
+	  "zh-cn": "已切换到新的 XQio `@iobroker/webserver`"
+      }, 
 	"1.0.4": {
 	  "en": "Password encryption active, minor code improvements",
 	  "de": "Passwortverschlüsselung aktiv, kleinere Codeverbesserungen",
@@ -205,8 +218,12 @@
   "native": {
     "activate_server": true,
     "bind": "0.0.0.0",
+    "ttl": 3600,
     "port": 7999,
-    "ssl": false,
+    "secure": false,
+    "certPublic": "",
+    "certPrivate": "",
+    "certChained": "",
     "user": "geo",
     "pass": "geo",
     "atHome": "Home"

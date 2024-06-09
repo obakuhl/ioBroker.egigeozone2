@@ -1,124 +1,198 @@
 {
-  "type": "panel",
+  "type": "tabs",
   "i18n": true,
   "items": {
-    "atHome": {
-      "label": "atHome",
-      "type": "text",
-      "sm": 12,
-      "md": 12,
-      "lg": 4
+    "mainTab": {
+      "type": "panel",
+      "label": "Main settings",
+      "items": {
+        "atHome": {
+          "label": "atHome",
+          "type": "text",
+          "sm": 12,
+          "md": 12,
+          "lg": 4
+        },
+        "activate_server":{
+          "newLine": true,
+          "type": "checkbox",
+          "label": "activate_server",
+          "sm": 12,
+          "md": 6,
+          "lg": 2
+        },
+        "bind": {
+          "hidden": "!data.activate_server",
+          "newLine": true,
+          "type": "ip",
+          "listenOnAllPorts": true,
+          "label": "IP",
+          "sm": 12,
+          "md": 8,
+          "lg": 4
+        },
+        "port": {
+          "label": "port",
+          "type": "text",
+          "sm": 12,
+          "md": 6,
+          "lg": 2,
+          "hidden": "!data.activate_server",
+          "help": "EgiGeoZone is listening for events on this port"
+        },
+        "secure": {
+          "newLine": true,
+          "type": "checkbox",
+          "label": "Secure(HTTPS)",
+          "sm": 12,
+          "md": 6,
+          "lg": 2
+        },
+        "certPublic": {
+          "type": "certificate",
+          "hidden": "!data.secure",
+          "certType": "public",
+          "validator": "!data.secure || data.certPublic",
+          "label": "Public certificate",
+          "sm": 12,
+          "md": 6,
+          "lg": 2
+        },
+        "certPrivate": {
+          "hidden": "!data.secure",
+          "type": "certificate",
+          "certType": "private",
+          "validator": "!data.secure || data.certPrivate",
+          "label": "Private certificate",
+          "sm": 12,
+          "md": 6,
+          "lg": 2
+        },
+        "certChained": {
+          "hidden": "!data.secure",
+          "type": "certificate",
+          "certType": "chained",
+          "label": "Chained certificate",
+          "sm": 12,
+          "md": 6,
+          "lg": 2
+        },
+        "auth": {
+          "newLine": true,
+          "type": "checkbox",
+          "confirm": {
+            "condition": "!data.secure && data.auth",
+            "title": "Warning!",
+            "text": "Unsecure_Auth",
+            "ok": "Ignore warning",
+            "cancel": "Disable authentication",
+            "type": "warning",
+            "alsoDependsOn": [
+              "secure"
+            ]
+          },
+          "label": "Authentication",
+          "sm": 12,
+          "md": 6,
+          "lg": 2
+        },
+        "_static": {
+          "newLine": true,
+          "type": "staticText",
+          "text": "Set username and password for authentication of your EgiGeoZone device. Use the same values in your mobile app settings.",
+          "hidden": "!data.activate_server",
+          "sm": 12
+        },
+        "user": {
+          "newLine": true,
+          "label": "user",
+          "type": "text",
+          "sm": 12,
+          "md": 6,
+          "lg": 2,
+          "hidden": "!data.activate_server"
+        },
+        "pass": {
+          "label": "password",
+          "repeat": true,
+          "type": "password",
+          "sm": 12,
+          "md": 6,
+          "lg": 2,
+          "hidden": "!data.activate_server"
+        },
+        "ignoreLeaving": {
+          "newLine": true,
+          "label": "ignoreLeaving",
+          "type": "checkbox",
+          "sm": 12,
+          "md": 6,
+          "lg": 2,
+          "hidden": "!data.activate_server"
+        },
+        "_info": {
+          "newLine": true,
+          "type": "header",
+          "sm": 12,
+          "size": 4,
+          "text": "EgiGeoZone mobile app"
+        },
+        "_info2": {
+          "type": "staticLink",
+          "lg": 3,
+          "md": 6,
+          "sm": 12,
+          "button": true,
+          "color": "primary",
+          "text": "Download App 'EgiGeoZone' for your device (only Android)",
+          "href": "https://play.google.com/store/apps/details?id=de.egi.geofence.geozone"
+        },
+        "_info3": {
+          "newLine": true,
+          "type": "staticText",
+          "sm": 6,
+          "text": "Create new server profile with the following values:"
+        },
+        "_info4": {
+          "newLine": true,
+          "type": "staticText",
+          "sm": 12,
+          "style": {
+            "listStyleType": "disc"
+          },
+          "text": "Profilname -> as desired"
+        },
+        "_info5": {
+          "newLine": true,
+          "type": "staticText",
+          "sm": 12,
+          "style": {
+            "listStyleType": "disc"
+          },
+          "text": "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)"
+        }
+      }
     },
-    "activate_server":{
-      "newLine": true,
-      "type": "checkbox",
-      "label": "activate_server",
-      "sm": 12,
-      "md": 6,
-      "lg": 2
-    },
-    "bind": {
-      "hidden": "!data.activate_server",
-      "newLine": true,
-      "type": "ip",
-      "listenOnAllPorts": true,
-      "label": "IP",
-      "sm": 12,
-      "md": 8,
-      "lg": 4
-    },
-    "port": {
-      "label": "port",
-      "type": "text",
-      "sm": 12,
-      "md": 6,
-      "lg": 2,
-      "hidden": "!data.activate_server",
-      "help": "EgiGeoZone is listening for events on this port"
-    },
-    "ssl": {
-      "newLine": true,
-      "label": "ssl",
-      "type": "checkbox",
-      "sm": 12,
-      "md": 6,
-      "lg": 2,
-      "hidden": "!data.activate_server"
-    },
-    "_static": {
-      "newLine": true,
-      "type": "staticText",
-      "text": "Set username and password for authentication of your EgiGeoZone device. Use the same values in your mobile app settings.",
-      "hidden": "!data.activate_server",
-      "sm": 12
-    },
-    "user": {
-      "newLine": true,
-      "label": "user",
-      "type": "text",
-      "sm": 12,
-      "md": 6,
-      "lg": 2,
-      "hidden": "!data.activate_server"
-    },
-    "pass": {
-      "label": "password",
-      "repeat": true,
-      "type": "password",
-      "sm": 12,
-      "md": 6,
-      "lg": 2,
-      "hidden": "!data.activate_server"
-    },
-    "ignoreLeaving": {
-      "newLine": true,
-      "label": "ignoreLeaving",
-      "type": "checkbox",
-      "sm": 12,
-      "md": 6,
-      "lg": 2,
-      "hidden": "!data.activate_server"
-    },
-    "_info": {
-      "newLine": true,
-      "type": "header",
-      "sm": 12,
-      "size": 4,
-      "text": "EgiGeoZone mobile app"
-    },
-    "_info2": {
-      "type": "staticLink",
-      "lg": 3,
-      "md": 6,
-      "sm": 12,
-      "button": true,
-      "color": "primary",
-      "text": "Download App 'EgiGeoZone' for your device (only Android)",
-      "href": "https://play.google.com/store/apps/details?id=de.egi.geofence.geozone"
-    },
-    "_info3": {
-      "newLine": true,
-      "type": "staticText",
-      "sm": 6,
-      "text": "Create new server profile with the following values:"
-    },
-    "_info4": {
-      "newLine": true,
-      "type": "staticText",
-      "sm": 12,
-      "style": {
-        "listStyleType": "disc"
-      },
-      "text": "Profilname -> as desired"
-    },
-    "_info5": {
-      "newLine": true,
-      "type": "staticText",
-      "sm": 12,
-      "style": {
-        "listStyleType": "disc"
-      },
-      "text": "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)"
+    "leTab": {
+      "type": "panel",
+      "label": "Let's Encrypt SSL",
+      "disabled": "!data.secure",
+      "items": {
+        "_image": {
+          "type": "staticImage",
+          "tooltip": "Read about Let's Encrypt certificates",
+          "href": "https://github.com/ioBroker/ioBroker.admin/blob/master/README.md#lets-encrypt-certificates",
+          "src": "../../img/le.png",
+          "style": {
+            "width": 200,
+            "height": 59
+          }
+        },
+        "_staticText": {
+          "type": "staticText",
+          "text": "ra_Use iobroker.acme adapter for letsencrypt certificates"
+        }
+      }
     }
   }
 }

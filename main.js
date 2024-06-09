@@ -10,9 +10,10 @@
 /* jslint node: true */
 'use strict';
 
-const utils       = require('@iobroker/adapter-core'); // Get common adapter utils
+const utils = require('@iobroker/adapter-core'); // Get common adapter utils
 const adapterName = require('./package.json').name.split('.').pop();
-const url 	  = require('node:url');
+const EgiGeoZoneWebServer = require('@iobroker/webserver');
+const url = require('node:url');
 
 let webServer =  null;
 let activateServer = false;
@@ -47,25 +48,14 @@ function main() {
 
     if (activateServer) {
         adapter.config.port = parseInt(adapter.config.port, 10);
-        if (adapter.config.ssl) {
-            // subscribe on changes of permissions
-            //adapter.subscribeForeignObjects('system.group.*');
-            //adapter.subscribeForeignObjects('system.user.*');
-
-            if (!adapter.config.certPublic) {
-                adapter.config.certPublic = 'defaultPublic';
-            }
-            if (!adapter.config.certPrivate) {
-                adapter.config.certPrivate = 'defaultPrivate';
-            }
-
-            // Load certificates
-            adapter.getCertificates((error, certificates, leConfig) => {
-                adapter.config.certificates = certificates;
-                adapter.config.leConfig     = leConfig;
-                webServer = initWebServer(adapter.config);
-            });
-        } else {
+        if (adapter.config.secure) {
+        // Load certificates
+        adapter.getCertificates((err, certificates, leConfig) => {
+            adapter.config.certificates = certificates;
+            adapter.config.leConfig = leConfig;
+            webServer = initWebServer(adapter.config);
+        });
+    	} else {
             webServer = initWebServer(adapter.config);
         }
     } else {
@@ -74,99 +64,152 @@ function main() {
 }
 
 function initWebServer(settings) {
-    const server = {
-        server:    null,
-        settings:  settings
-    };
+    const server = {app: null, server: null, io: null, settings};
+
+    settings.port = parseInt(settings.port, 10) || 0;
 
     if (settings.port) {
-        if (settings.ssl) {
-            if (!adapter.config.certificates) {
-                adapter.log.error(`Cannot start http${settings.ssl ? 's' : ''} server: SSL required but no certificates selected!`)
-                return null;
+        if (settings.secure && !settings.certificates) {
+            return null;
+        }
+
+        adapter.getPort(
+            settings.port,
+            !settings.bind || settings.bind === '0.0.0.0' ? undefined : settings.bind || undefined,
+            async port => {
+                if (parseInt(port, 10) !== settings.port && !adapter.config.findNextPort) {
+                    adapter.log.error(`port ${settings.port} already in use`);
+                    return adapter.terminate ? adapter.terminate(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION) : process.exit(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION);
+                }
+
+                settings.port = port;
+
+                try {
+		    if (settings.auth) {
+                	const webserver = new EgiGeoZoneWebServer.WebServer({app: requestProcessorAuth, adapter, secure: adapter.config.secure});
+                    	server.server = await webserver.init();
+		    } else {
+		        const webserver = new EgiGeoZoneWebServer.WebServer({app: requestProcessor, adapter, secure: adapter.config.secure});
+                    	server.server = await webserver.init();
+		    }
+                } catch (err) {
+                    adapter.log.error(`Cannot create webserver: ${err}`);
+                    adapter.terminate ? adapter.terminate(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION) : process.exit(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION);
+                    return;
+                }
+                if (!server.server) {
+                    adapter.log.error(`Cannot create webserver`);
+                    adapter.terminate ? adapter.terminate(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION) : process.exit(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION);
+                    return;
+                }
+
+                let serverListening = false;
+                server.server.on('error', e => {
+                    if (e.toString().includes('EACCES') && port <= 1024) {
+                        adapter.log.error(
+                            `node.js process has no rights to start server on the port ${port}.\n` +
+                                'Do you know that on linux you need special permissions for ports under 1024?\n' +
+                                'You can call in shell following scrip to allow it for node.js: "iobroker fix"'
+                        );
+                    } else {
+                        adapter.log.error(`Cannot start server on ${settings.bind || '0.0.0.0'}:${port}: ${e}`);
+                    }
+                    if (!serverListening) {
+                        adapter.terminate ? adapter.terminate(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION) : process.exit(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION);
+                    }
+                });
+
+                // Start the web server
+                server.server.listen(settings.port, (!settings.bind || settings.bind === '0.0.0.0') ? undefined : settings.bind || undefined, () => {
+			adapter.setState('info.connection', true, true);
+			serverListening = true;
+                });
+
+		adapter.log.info(`http${settings.secure ? 's' : ''} server listening on port ${port}`);
             }
-        }
-
-        try {
-            if (settings.ssl) {
-                server.server = require('https').createServer(adapter.config.certificates, requestProcessor);
-            } else {
-                server.server = require('http').createServer(requestProcessor);
-            }
-        } catch (err) {
-            adapter.log.error(`Cannot create web-server: ${err}`);
-            adapter.terminate ? adapter.terminate(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION) : process.exit(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION);
-            return;
-        }
-        if (!server.server) {
-            adapter.log.error(`Cannot create web-server`);
-            adapter.terminate ? adapter.terminate(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION) : process.exit(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION);
-            return;
-        }
-
-
-        server.server.__server = server;
+        );
     } else {
-        adapter.log.error(`Cannot start http${settings.ssl ? 's' : ''} server: No port provided!`);
-        return;
+        adapter.log.error('port missing');
+        adapter.terminate ? adapter.terminate(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION) : process.exit(utils.EXIT_CODES.ADAPTER_REQUESTED_TERMINATION);
     }
 
-    if (server.server) {
-        adapter.getPort(settings.port, (!settings.bind || settings.bind === '0.0.0.0') ? undefined : settings.bind || undefined, port => {
-            if (port !== settings.port && !adapter.config.findNextPort) {
-                adapter.log.error(`Cannot start http${settings.ssl ? 's' : ''} server: Port ${settings.port} already in use!`);
-                return;
-            }
+    return server;
+}
+
+//auth
+function requestProcessorAuth(req, res) {
+
+    adapter.log.debug('Authorization necessary');
+	
+    const checkUser = adapter.config.user;
+    const checkPass = adapter.config.pass;
+	
+    // If they pass in a basic auth credential it'll be in a header called "Authorization" (note NodeJS lowercases the names of headers in its request object)
+    const auth2 = req.headers.authorization;  // auth is in base64(username:password)  so we need to decode the base64
+    adapter.log.debug(`Authorization Header is: ${JSON.stringify(auth2)}`);
+	
+    let requestValid = true;
+    if (checkUser && checkPass) {
+	if (!auth2) {
+	    adapter.log.warn('Authorization Header missing but user/pass defined');
+	    requestValid = false;
+	} else {
+	    const tmp = auth2.split(' ');   // Split on a space, the original auth looks like  "Basic Y2hhcmxlczoxMjM0NQ==" and we need the 2nd part
+	    const plainAuth = Buffer.from(tmp[1], 'base64').toString(); // create a buffer and tell it the data coming in is base64
+		
+	    adapter.log.debug(`Decoded Authorization ${plainAuth}`);
+	    // At this point plainAuth = "username:password"
+	    const [username, password] = plainAuth.split(':');      // split on a ':'
+	    if (username !== checkUser || password !== checkPass) {
+		adapter.log.warn('User credentials invalid');
+		requestValid = false;
+	    }
+	}
+    }
+    if (!requestValid) {
+	res.statusCode = 401;
+	res.end();
+	return;
+    }
+
+    if (req.method === 'GET') {
+        adapter.log.debug(`request url: ${req.url}`);
+        const parsedUrl = url.parse(req.url, true);
+
+        const user = (parsedUrl.pathname.slice(1)).replace(adapter.FORBIDDEN_CHARS, '_').replace(/\s|\./g, '_');
+
+	(async() => {
             try {
-                server.server.listen(port, (!settings.bind || settings.bind === '0.0.0.0') ? undefined : settings.bind || undefined, () =>
-                    adapter.setState('info.connection', true, true));
+		const reqData = parsedUrl.query;
+		//log analyzed data
+		adapter.log.debug(`Analyzed request data: ${JSON.stringify(reqData)}`);		
+		await handleRequest(user, reqData);
             } catch (err) {
-                adapter.log.warn(`Cannot start http${settings.ssl ? 's' : ''} server: ${err.message}`);
-                return;
+		adapter.log.info(`Could not process request for user ${user}: ${err}`);
+		res.writeHead(500);
+		res.write('Request error');
+		res.end();
+		return;
             }
-            adapter.log.info(`http${settings.ssl ? 's' : ''} server listening on port ${port}`);
-        });
-    }
-
-    if (server.server) {
-        return server;
+            //log requested user
+            adapter.log.debug(`request user: ${user}`);
+	
+            res.writeHead(200);
+            res.write("OK");
+            res.end();
+	})();
     } else {
-        return null;
+	res.writeHead(500);
+	res.write("Request error");
+	res.end();
     }
 }
 
+//non auth
 function requestProcessor(req, res) {
-    const checkUser = adapter.config.user;
-    const checkPass = adapter.config.pass;
+	
+    adapter.log.debug('No authorization necessary');
 
-    // If they pass in a basic auth credential it'll be in a header called "Authorization" (note NodeJS lowercases the names of headers in its request object)
-    const auth = req.headers.authorization;  // auth is in base64(username:password)  so we need to decode the base64
-    adapter.log.debug(`Authorization Header is: ${JSON.stringify(auth)}`);
-
-    let requestValid = true;
-    if (checkUser && checkPass) {
-        if (!auth) {
-            adapter.log.warn('Authorization Header missing but user/pass defined');
-            requestValid = false;
-        } else {
-            const tmp = auth.split(' ');   // Split on a space, the original auth looks like  "Basic Y2hhcmxlczoxMjM0NQ==" and we need the 2nd part
-            const plainAuth = Buffer.from(tmp[1], 'base64').toString(); // create a buffer and tell it the data coming in is base64
-
-            adapter.log.debug(`Decoded Authorization ${plainAuth}`);
-            // At this point plainAuth = "username:password"
-            const [username, password] = plainAuth.split(':');      // split on a ':'
-            if (username !== checkUser || password !== checkPass) {
-                adapter.log.warn('User credentials invalid');
-                requestValid = false;
-            }
-        }
-    }
-
-    if (!requestValid) {
-        res.statusCode = 401;
-        res.end();
-        return;
-    }
     if (req.method === 'GET') {
         adapter.log.debug(`request url: ${req.url}`);
         const parsedUrl = url.parse(req.url, true);
