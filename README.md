@@ -38,7 +38,7 @@ protocol://address:port/person
 
 ## Changelog
 
-### 1.0.5 #### WORK IN PROGRESS
+### 1.0.5
 * (obakuhl) use `@iobroker/webserver`
 
 ### 1.0.4
