@@ -298,31 +298,31 @@ async function createObjects(user, reqData) {
 
     let obj = {
         type: 'state',
-        common: {name: 'changed', read: true, write: false, role: 'date', type: 'string'},
+        common: {name: `changed${user}`, desc: `Last change of location of ${user}`, read: true, write: false, role: 'date', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.changed`, obj);
     obj = {
         type: 'state',
-        common: {name: 'location', read: true, write: false, role: 'location', type: 'string'},
+        common: {name: `location${user}`, desc: `Last known location of ${user}`, read: true, write: false, role: 'location', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.location`, obj);	
     obj = {
         type: 'state',
-        common: {name: 'lastLatitude', read: true, write: false, role: 'value.gps.latitude', type: 'string'},
+        common: {name: `lastLatitude${user}`, desc: `Latitude of last known location of ${user}`, read: true, write: false, role: 'value.gps.latitude', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.lastLatitude`, obj);
     obj = {
         type: 'state',
-        common: {name: 'lastLongitude', read: true, write: false, role: 'value.gps.longitude', type: 'string'},
+        common: {name: `lastLongitude${user}`, desc: `Longitude of last known location of ${user}`, read: true, write: false, role: 'value.gps.longitude', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.lastLongitude`, obj);
     obj = {
         type: 'state',
-        common: {name: 'json', read: true, write: false, role: 'json', type: 'string'},
+        common: {name: `json${user}`, desc: `JSON of ${user}`, read: true, write: false, role: 'json', type: 'string'},
         native: {user}
     };
     await adapter.extendObjectAsync(`${user}.json`, obj);
