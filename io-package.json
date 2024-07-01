@@ -1,9 +1,22 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "news": {
-	"1.0.5": {
+	"1.0.6": {
+	  "en": "Improved object definition",
+	  "de": "Verbesserte Objektdefinition",
+	  "ru": "Улучшенное определение объекта",
+	  "pt": "Melhor definição de objeto",
+	  "nl": "Verbeterde objectdefinitie",
+	  "fr": "Définition améliorée de l'objet",
+	  "it": "Definizione degli oggetti migliorata",
+	  "es": "Mejor definición de objeto",
+	  "pl": "Ulepszona definicja obiektu",
+	  "uk": "Покращення визначення об'єкта",
+	  "zh-cn": "改进对象定义"
+	}, 
+	  "1.0.5": {
 	  "en": "Switched to new `@iobroker/webserver`",
 	  "de": "Verwendung von `@iobroker/webserver` implementiert",
 	  "ru": "Переключение на новый `@iobroker/webserver`",
