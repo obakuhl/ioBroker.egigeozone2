@@ -38,8 +38,9 @@ protocol://address:port/person
 
 ## Changelog
 
-### 1.0.6 - WORK IN PROGRESS
+### 1.0.6
 * (obakuhl) Improved object definition
+* (obakuhl) New icon
 
 ### 1.0.5
 * (obakuhl) use `@iobroker/webserver`
