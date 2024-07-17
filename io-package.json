@@ -4,17 +4,17 @@
     "version": "1.0.6",
     "news": {
 	"1.0.6": {
-	  "en": "Improved object definition",
-	  "de": "Verbesserte Objektdefinition",
-	  "ru": "Улучшенное определение объекта",
-	  "pt": "Melhor definição de objeto",
-	  "nl": "Verbeterde objectdefinitie",
-	  "fr": "Définition améliorée de l'objet",
-	  "it": "Definizione degli oggetti migliorata",
-	  "es": "Mejor definición de objeto",
-	  "pl": "Ulepszona definicja obiektu",
-	  "uk": "Покращення визначення об'єкта",
-	  "zh-cn": "改进对象定义"
+	  "en": "Improved object definition, new icon",
+	  "de": "Verbesserte Objektdefinition, neues Logo",
+	  "ru": "Улучшенное определение объекта, новая икона",
+	  "pt": "Melhor definição de objeto, novo ícone",
+	  "nl": "Verbeterde objectdefinitie, nieuw pictogram",
+	  "fr": "Définition améliorée de l'objet, nouvelle icône",
+	  "it": "Definizione degli oggetti migliorata, nuova icona",
+	  "es": "Mejor definición de objeto, nuevo icono",
+	  "pl": "Ulepszona definicja obiektu, nowa ikona",
+	  "uk": "Покращення визначення об'єкта, нова ікона",
+	  "zh-cn": "改进对象定义, 新图标"
 	}, 
 	  "1.0.5": {
 	  "en": "Switched to new `@iobroker/webserver`",
