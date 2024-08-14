@@ -9,7 +9,8 @@
   "homepage": "",
   "license": "MIT",
   "keywords": [
-    "egigeozone"
+    "egigeozone",
+    "ioBroker"
   ],
   "repository": {
     "type": "git",
@@ -19,7 +20,7 @@
     "node": ">=18"
   },
   "dependencies": {
-     "@iobroker/adapter-core": "^3.1.4",
+     "@iobroker/adapter-core": "^3.1.6",
      "@iobroker/webserver": "^1.0.3"
   },
   "devDependencies": {
