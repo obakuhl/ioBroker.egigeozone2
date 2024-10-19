@@ -170,6 +170,7 @@
           "xl": 4
         },
         "_info2": {
+          "newLine": true,
           "type": "staticLink",
           "button": true,
           "color": "primary",

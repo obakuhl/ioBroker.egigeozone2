@@ -1,6 +1,6 @@
 {
-    "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL-адреса Fhem Geofancy -> http://[iobroker-address]:[port]/[Person] (де [Person] буде назва розташування асоціюється з)",
-    "Profilname -> as desired": "Профілім'я -> за бажанням",
+    "URL Fhem Geofancy: http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL-адреса Fhem Geofancy: http://[iobroker-address]:[port]/[Person] (де [Person] буде назва розташування асоціюється з)",
+    "Profile name: as desired": "Профілім'я: за бажанням",
     "Create new server profile with the following values:": "Створення профілю сервера з такими значеннями:",
     "Download App 'EgiGeoZone' for your device (only Android)": "Завантажити EgiGeo Зона для пристрою",
     "For any new location -> properties -> settings:": "Для будь-якого нового місця -> властивості -> налаштування вебhook:",

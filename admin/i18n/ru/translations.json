@@ -1,6 +1,6 @@
 {
-    "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (где [Person] будет название, с которым будет связано местоположение)",
-    "Profilname -> as desired": "Профильное имя -> по желанию",
+    "URL Fhem Geofancy: http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL Fhem Geofancy: http(s)://[iobroker-address]:[port]/[Person] (где [Person] будет название, с которым будет связано местоположение)",
+    "Profile name: as desired": "Профильное имя: по желанию",
     "Create new server profile with the following values:": "Создание нового профиля сервера со следующими значениями:",
     "Download App 'EgiGeoZone' for your device (only Android)": "Загрузите EgiGeoZone для своего устройства",
     "For any new location -> properties -> settings:": "Для любого нового местоположения -> свойства -> настройки веб-перехватчика:",

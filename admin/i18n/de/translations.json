@@ -1,6 +1,6 @@
 {
-    "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] ([Person] ist das Objekt mit dem der Standort verknüpft ist, http:// wenn SSL nicht verwendet wird, https:// wenn SSL verwendet wird)",
-    "Profilname -> as desired": "Profilname -> wie gewünscht",
+    "URL Fhem Geofancy: http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL Fhem Geofancy: http(s)://[iobroker-address]:[port]/[Person] ([Person] ist das Objekt mit dem der Standort verknüpft ist, http:// wenn SSL nicht verwendet wird, https:// wenn SSL verwendet wird)",
+    "Profile name: as desired": "Profilname: Frei wählbar",
     "Create new server profile with the following values:": "Neues Serverprofil mit folgenden Werten erstellen:",
     "Download App 'EgiGeoZone' for your device (only Android)": "EgiGeoZone für das Smartphone herunterladen (nur Android)",
     "For any new location -> properties -> settings:": "Für jeden neuen Standort -> Eigenschaften -> Einstellungen:",
