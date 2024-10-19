@@ -9,17 +9,21 @@
         "atHome": {
           "label": "atHome",
           "type": "text",
+          "xs": 12,
           "sm": 12,
-          "md": 12,
-          "lg": 4
+          "md": 6,
+          "lg": 4,
+          "xl": 4
         },
         "activate_server":{
           "newLine": true,
           "type": "checkbox",
           "label": "activate_server",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2
+          "lg": 4,
+          "xl": 4
         },
         "bind": {
           "hidden": "!data.activate_server",
@@ -27,26 +31,32 @@
           "type": "ip",
           "listenOnAllPorts": true,
           "label": "IP",
+          "xs": 12,
           "sm": 12,
-          "md": 8,
-          "lg": 4
+          "md": 6,
+          "lg": 4,
+          "xl": 4
         },
         "port": {
           "label": "port",
           "type": "text",
+          "hidden": "!data.activate_server",
+          "help": "EgiGeoZone is listening for events on this port",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2,
-          "hidden": "!data.activate_server",
-          "help": "EgiGeoZone is listening for events on this port"
+          "lg": 4,
+          "xl": 4
         },
         "secure": {
           "newLine": true,
           "type": "checkbox",
-          "label": "Secure(HTTPS)",
+          "label": "Secure (HTTPS)",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2
+          "lg": 4,
+          "xl": 4
         },
         "certPublic": {
           "type": "certificate",
@@ -54,9 +64,11 @@
           "certType": "public",
           "validator": "!data.secure || data.certPublic",
           "label": "Public certificate",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2
+          "lg": 4,
+          "xl": 4
         },
         "certPrivate": {
           "hidden": "!data.secure",
@@ -64,18 +76,22 @@
           "certType": "private",
           "validator": "!data.secure || data.certPrivate",
           "label": "Private certificate",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2
+          "lg": 4,
+          "xl": 4
         },
         "certChained": {
           "hidden": "!data.secure",
           "type": "certificate",
           "certType": "chained",
           "label": "Chained certificate",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2
+          "lg": 4,
+          "xl": 4
         },
         "auth": {
           "newLine": true,
@@ -92,84 +108,114 @@
             ]
           },
           "label": "Authentication",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2
+          "lg": 4,
+          "xl": 4
         },
         "_static": {
           "newLine": true,
           "type": "staticText",
           "text": "Set username and password for authentication of your EgiGeoZone device. Use the same values in your mobile app settings.",
           "hidden": "!data.activate_server",
-          "sm": 12
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4
         },
         "user": {
           "newLine": true,
           "label": "user",
           "type": "text",
+          "hidden": "!data.activate_server",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2,
-          "hidden": "!data.activate_server"
+          "lg": 4,
+          "xl": 4
         },
         "pass": {
           "label": "password",
           "repeat": true,
           "type": "password",
+          "hidden": "!data.activate_server",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2,
-          "hidden": "!data.activate_server"
+          "lg": 4,
+          "xl": 4
         },
         "ignoreLeaving": {
           "newLine": true,
           "label": "ignoreLeaving",
           "type": "checkbox",
+          "hidden": "!data.activate_server",
+          "xs": 12,
           "sm": 12,
           "md": 6,
-          "lg": 2,
-          "hidden": "!data.activate_server"
+          "lg": 4,
+          "xl": 4
         },
         "_info": {
           "newLine": true,
           "type": "header",
-          "sm": 12,
+          "text": "EgiGeoZone mobile app",
           "size": 4,
-          "text": "EgiGeoZone mobile app"
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4
         },
         "_info2": {
           "type": "staticLink",
-          "lg": 3,
-          "md": 6,
-          "sm": 12,
           "button": true,
           "color": "primary",
           "text": "Download App 'EgiGeoZone' for your device (only Android)",
-          "href": "https://play.google.com/store/apps/details?id=de.egi.geofence.geozone"
+          "href": "https://play.google.com/store/apps/details?id=de.egi.geofence.geozone",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4
         },
         "_info3": {
           "newLine": true,
           "type": "staticText",
-          "sm": 6,
-          "text": "Create new server profile with the following values:"
+          "text": "Create new server profile with the following values:",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4
         },
         "_info4": {
           "newLine": true,
           "type": "staticText",
-          "sm": 12,
           "style": {
             "listStyleType": "disc"
           },
-          "text": "Profilname -> as desired"
+          "text": "Profile name: as desired",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4
         },
         "_info5": {
           "newLine": true,
           "type": "staticText",
-          "sm": 12,
           "style": {
             "listStyleType": "disc"
           },
-          "text": "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)"
+          "text": "URL Fhem Geofancy: http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4 
         }
       }
     },
@@ -186,11 +232,21 @@
           "style": {
             "width": 200,
             "height": 59
-          }
+          },
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4 
         },
         "_staticText": {
           "type": "staticText",
-          "text": "ra_Use iobroker.acme adapter for letsencrypt certificates"
+          "text": "ra_Use iobroker.acme adapter for letsencrypt certificates",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4 
         }
       }
     }
