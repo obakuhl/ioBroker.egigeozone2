@@ -1,6 +1,6 @@
 {
-    "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL Fhem Geofancy -> http(s)://[iobroker-address]:[port]/[Person] (waar [Person] de naam zal zijn waarmee de locatie zal worden geassocieerd)",
-    "Profilname -> as desired": "Profilnaam -> naar wens",
+    "URL Fhem Geofancy: http(s)://[iobroker-address]:[port]/[Person] (where [Person] will be the name the location will be associated with)": "URL Fhem Geofancy: http(s)://[iobroker-address]:[port]/[Person] (waar [Person] de naam zal zijn waarmee de locatie zal worden geassocieerd)",
+    "Profile name: as desired": "Profilnaam -> naar wens",
     "Create new server profile with the following values:": "Maak een nieuw serverprofiel aan met de volgende waarden:",
     "Download App 'EgiGeoZone' for your device (only Android)": "EgiGeoZone downloaden voor uw apparaat",
     "For any new location -> properties -> settings:": "Voor elke nieuwe locatie -> eigenschappen -> webhook-instellingen:",
