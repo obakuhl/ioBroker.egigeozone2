@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "news": {
+	"1.0.7": {
+	  "en": "Fully implemented responsive design, minor adjustments",
+	  "de": "Vollständig implementiertes responsives Design, kleinere Anpassungen",
+	  "ru": "Полностью реализованный отзывчивый дизайн, незначительные корректировки",
+	  "pt": "Design responsivo totalmente implementado, pequenos ajustes",
+	  "nl": "Volledig geïmplementeerd responsief ontwerp, kleine aanpassingen",
+	  "fr": "Conception réactive entièrement mise en œuvre, ajustements mineurs",
+	  "it": "Design responsive completamente implementato, piccole modifiche",
+	  "es": "Diseño responsive totalmente implementado, ajustes menores",
+	  "pl": "W pełni zaimplementowany responsywny design, drobne poprawki",
+	  "uk": "Повністю реалізовано адаптивний дизайн, незначні коригування",
+	  "zh-cn": "Fully implemented responsive design, minor adjustments"
+	},
 	"1.0.6": {
 	  "en": "Improved object definition, new icon",
 	  "de": "Verbesserte Objektdefinition, neues Logo",
