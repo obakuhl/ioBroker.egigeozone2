@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "news": {
+	"1.0.8": {
+	  "en": "Updating dependencies, min version admin >=7.4.10",
+	  "de": "Aktualisierung der Abhängigkeiten, Mindestversion admin >=7.4.10",
+	  "ru": "Обновление зависимостей, min версия admin >=7.4.10",
+	  "pt": "Atualização das dependências, versão mínima admin >=7.4.10",
+	  "nl": "Afhankelijkheden bijwerken, min versie admin >=7.4.10",
+	  "fr": "Mise à jour des dépendances, version min admin >=7.4.10",
+	  "it": "Aggiornamento delle dipendenze, versione minima admin >=7.4.10",
+	  "es": "Actualizando dependencias, versión min admin >=7.4.10",
+	  "pl": "Aktualizacja zależności, min. wersja admin >=7.4.10",
+	  "uk": "Оновлення залежностей, мінімальна версія admin >=7.4.10",
+	  "zh-cn": "Updating dependencies, min version admin >=7.4.10"
+	},
 	"1.0.7": {
 	  "en": "Fully implemented responsive design, minor adjustments",
 	  "de": "Vollständig implementiertes responsives Design, kleinere Anpassungen",
@@ -67,45 +80,6 @@
 	  "pl": "Aktualizacja zależności",
 	  "uk": "Оновлення залежності",
 	  "zh-cn": "更新依赖关系"
-      }, 
-	"1.0.2": {
-	  "en": "Updating dependencies",
-	  "de": "Aktualisierung von Abhängigkeiten",
-	  "ru": "Удаление зависимостей",
-	  "pt": "Atualizar dependências",
-	  "nl": "Afhankelijkheden bijwerken",
-	  "fr": "Mise à jour des dépendances",
-	  "it": "Aggiornare le dipendenze",
-	  "es": "Actualización de las dependencias",
-	  "pl": "Aktualizacja zależności",
-	  "uk": "Оновлення залежності",
-	  "zh-cn": "更新依赖关系"
-      }, 
-	"1.0.1": {
-	  "en": "Resolved minor issue when leaving location\nRaised minimum version of adapter-core to 3.1.4 and node >= 18",
-	  "de": "Kleines Problem beim Verlassen des Standorts behoben\nMindestversion von adapter-core auf 3.1.4 und Node >= 18 angehoben",
-	  "ru": "Устраненная незначительная проблема при выходе из места расположения\n 3.1.4 и узел >= 18",
-	  "pt": "Problema menor resolvido ao sair da localização\n Versão mínima aumentada do adaptador-core para 3.1.4 e node >= 18",
-	  "nl": "Klein probleem opgelost bij het verlaten van locatie\n met een vermogen van meer dan 750 W 18",
-	  "fr": "Problème mineur résolu en quittant l'emplacement\n Version minimale relevée de l'adaptateur-core à 3.1.4 et noeud >= 18",
-	  "it": "Risolto problema minore quando si lascia la posizione\n Versione minima aggiornata di adattatore-core a 3.1.4 e nodo >= 18",
-	  "es": "Problema menor resuelto al salir de la ubicación\n Versión mínima actualizada de adaptador-core a 3.1.4 y nodo >= 18",
-	  "pl": "Rozwiązanie drobnych problemów przy opuszczaniu lokalizacji\n Zwiększona minimalna wersja adaptera rdzenia do 3.1.4 i węzła > = 18",
-	  "uk": "Вирішений незначний номер при виїзді місця\n Переглянуто мінімальну версію адаптера до 3.1.4 та вершини >= 18 років",
-	  "zh-cn": "离开位置时解决的小问题\n 将适配器核心的最低版本提高到3.1.4和节点QQ 第 18 条"
-      },    
-	"1.0.0": {
-	  "en": "Refactoring",
-	  "de": "Refactoring",
-	  "ru": "Рефакторинг",
-	  "pt": "Refactoring",
-	  "nl": "Refactoring",
-	  "fr": "Refactoration",
-	  "it": "Refactoring",
-	  "es": "Refactoring",
-	  "pl": "Refaktoring",
-	  "uk": "Рефакторинг",
-	  "zh-cn": "正在重构"
       }
     },
     "titleLang": {
@@ -175,7 +149,7 @@
     ],
     "globalDependencies": [
       {
-        "admin": ">=6.13.16"
+        "admin": ">=7.4.10"
       }
     ],
     "plugins": {
