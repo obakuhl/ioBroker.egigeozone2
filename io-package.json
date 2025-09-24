@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.8",
-    "news": {
+    "version": "1.0.9",
+    "news": { 
+	"1.0.9": {
+	  "en": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11",
+	  "de": "Aktualisierung der Abhängigkeiten, min version admin >= 7.6.17, js-controller >= 6.0.11",
+	  "ru": "Обновление зависимостей, min версия admin >= 7.6.17, js-controller >= 6.0.11",
+	  "pt": "Atualizar dependências, versão mínima admin >= 7.6.17, js-controller >= 6.0.11",
+	  "nl": "Afhankelijkheden bijwerken, min versie admin >= 7.6.17, js-controller >= 6.0.11",
+	  "fr": "Mise à jour des dépendances, version min admin >= 7.6.17, js-controller >= 6.0.11",
+	  "it": "Aggiornamento delle dipendenze, versione min admin >= 7.6.17, js-controller >= 6.0.11",
+	  "es": "Actualizando dependencias, versión min admin >= 7.6.17, js-controller >= 6.0.11",
+	  "pl": "Aktualizacja zależności, min wersja admin >= 7.6.17, js-controller >= 6.0.11",
+	  "uk": "Оновлення залежностей, мінімальна версія admin >= 7.6.17, js-controller >= 6.0.11",
+	  "zh-cn": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11"
+    },
 	"1.0.8": {
 	  "en": "Updating dependencies, min version admin >=7.4.10",
 	  "de": "Aktualisierung der Abhängigkeiten, Mindestversion admin >=7.4.10",
@@ -67,19 +80,6 @@
 	  "pl": "Hasło szyfrowanie aktywne, drobne ulepszenia kodu",
 	  "uk": "Захист паролів активні, незначні покращення коду",
 	  "zh-cn": "密码加密活动, 小代码改进"
-      }, 
-	"1.0.3": {
-	  "en": "Updating dependencies",
-	  "de": "Aktualisierung von Abhängigkeiten",
-	  "ru": "Удаление зависимостей",
-	  "pt": "Atualizar dependências",
-	  "nl": "Afhankelijkheden bijwerken",
-	  "fr": "Mise à jour des dépendances",
-	  "it": "Aggiornare le dipendenze",
-	  "es": "Actualización de las dependencias",
-	  "pl": "Aktualizacja zależności",
-	  "uk": "Оновлення залежності",
-	  "zh-cn": "更新依赖关系"
       }
     },
     "titleLang": {
@@ -144,12 +144,12 @@
     "compact": true,
     "dependencies": [
       {
-        "js-controller": ">=5.0.19"
+        "js-controller": ">=6.0.11"
       }
     ],
     "globalDependencies": [
       {
-        "admin": ">=7.4.10"
+        "admin": ">=7.6.17"
       }
     ],
     "plugins": {
