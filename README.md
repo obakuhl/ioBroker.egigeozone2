@@ -38,6 +38,9 @@ protocol://address:port/person
 
 ## Changelog
 
+### **WORK IN PROGRESS**
+- (copilot) Adapter requires node.js >= 22 now
+
 ### 1.0.9
 * (obakuhl) Updating dependencies
 
