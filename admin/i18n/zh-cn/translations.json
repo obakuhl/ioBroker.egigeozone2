@@ -13,5 +13,13 @@
     "port": "港口",
     "ssl": "使用 SSL (https://)",
     "user": "用户",
-    "ignoreLeaving": "忽略离开"
+    "ignoreLeaving": "忽略离开",
+	"Let's Encrypt SSL": "Let's Encrypt SSL",
+	"Read about Let's Encrypt certificates": "了解 Let's Encrypt 憑證",
+	"Main settings": "主要設定",
+	"Authentication": "驗證",
+	"Chained certificate": "Chained certificate",
+	"Private certificate": "Private certificate",
+	"Public certificate": "Public certificate",
+	"Secure (HTTPS)": "加密 (HTTPS)"
 }

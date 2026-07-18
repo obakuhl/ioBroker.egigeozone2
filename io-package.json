@@ -3,84 +3,71 @@
     "name": "egigeozone2",
     "version": "1.0.9",
     "news": { 
-	"1.0.9": {
-	  "en": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11",
-	  "de": "Aktualisierung der Abhängigkeiten, min version admin >= 7.6.17, js-controller >= 6.0.11",
-	  "ru": "Обновление зависимостей, min версия admin >= 7.6.17, js-controller >= 6.0.11",
-	  "pt": "Atualizar dependências, versão mínima admin >= 7.6.17, js-controller >= 6.0.11",
-	  "nl": "Afhankelijkheden bijwerken, min versie admin >= 7.6.17, js-controller >= 6.0.11",
-	  "fr": "Mise à jour des dépendances, version min admin >= 7.6.17, js-controller >= 6.0.11",
-	  "it": "Aggiornamento delle dipendenze, versione min admin >= 7.6.17, js-controller >= 6.0.11",
-	  "es": "Actualizando dependencias, versión min admin >= 7.6.17, js-controller >= 6.0.11",
-	  "pl": "Aktualizacja zależności, min wersja admin >= 7.6.17, js-controller >= 6.0.11",
-	  "uk": "Оновлення залежностей, мінімальна версія admin >= 7.6.17, js-controller >= 6.0.11",
-	  "zh-cn": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11"
-    },
-	"1.0.8": {
-	  "en": "Updating dependencies, min version admin >=7.4.10",
-	  "de": "Aktualisierung der Abhängigkeiten, Mindestversion admin >=7.4.10",
-	  "ru": "Обновление зависимостей, min версия admin >=7.4.10",
-	  "pt": "Atualização das dependências, versão mínima admin >=7.4.10",
-	  "nl": "Afhankelijkheden bijwerken, min versie admin >=7.4.10",
-	  "fr": "Mise à jour des dépendances, version min admin >=7.4.10",
-	  "it": "Aggiornamento delle dipendenze, versione minima admin >=7.4.10",
-	  "es": "Actualizando dependencias, versión min admin >=7.4.10",
-	  "pl": "Aktualizacja zależności, min. wersja admin >=7.4.10",
-	  "uk": "Оновлення залежностей, мінімальна версія admin >=7.4.10",
-	  "zh-cn": "Updating dependencies, min version admin >=7.4.10"
-	},
-	"1.0.7": {
-	  "en": "Fully implemented responsive design, minor adjustments",
-	  "de": "Vollständig implementiertes responsives Design, kleinere Anpassungen",
-	  "ru": "Полностью реализованный отзывчивый дизайн, незначительные корректировки",
-	  "pt": "Design responsivo totalmente implementado, pequenos ajustes",
-	  "nl": "Volledig geïmplementeerd responsief ontwerp, kleine aanpassingen",
-	  "fr": "Conception réactive entièrement mise en œuvre, ajustements mineurs",
-	  "it": "Design responsive completamente implementato, piccole modifiche",
-	  "es": "Diseño responsive totalmente implementado, ajustes menores",
-	  "pl": "W pełni zaimplementowany responsywny design, drobne poprawki",
-	  "uk": "Повністю реалізовано адаптивний дизайн, незначні коригування",
-	  "zh-cn": "Fully implemented responsive design, minor adjustments"
-	},
-	"1.0.6": {
-	  "en": "Improved object definition, new icon",
-	  "de": "Verbesserte Objektdefinition, neues Logo",
-	  "ru": "Улучшенное определение объекта, новая икона",
-	  "pt": "Melhor definição de objeto, novo ícone",
-	  "nl": "Verbeterde objectdefinitie, nieuw pictogram",
-	  "fr": "Définition améliorée de l'objet, nouvelle icône",
-	  "it": "Definizione degli oggetti migliorata, nuova icona",
-	  "es": "Mejor definición de objeto, nuevo icono",
-	  "pl": "Ulepszona definicja obiektu, nowa ikona",
-	  "uk": "Покращення визначення об'єкта, нова ікона",
-	  "zh-cn": "改进对象定义, 新图标"
-	}, 
-	  "1.0.5": {
-	  "en": "Switched to new `@iobroker/webserver`",
-	  "de": "Verwendung von `@iobroker/webserver` implementiert",
-	  "ru": "Переключение на новый `@iobroker/webserver`",
-	  "pt": "Mudado para novo `@iobroker/webserver`",
-	  "nl": "Overgeschakeld naar nieuwe `@iobroker/webserver` Wat",
-	  "fr": "Passé au nouveau `@iobroker/webserver`",
-	  "it": "Passato al nuovo `@iobroker/webserver`",
-	  "es": "Conmutado a nuevo `@iobroker/webserver `",
-	  "pl": "Przełączono na nowy `@iobroker/webserver`",
-	  "uk": "Вимкнено новий `@iobroker/webserver` й",
-	  "zh-cn": "已切换到新的 XQio `@iobroker/webserver`"
-      }, 
-	"1.0.4": {
-	  "en": "Password encryption active, minor code improvements",
-	  "de": "Passwortverschlüsselung aktiv, kleinere Codeverbesserungen",
-	  "ru": "Активное шифрование пароля, незначительные улучшения кода",
-	  "pt": "Criptografia de senha ativa, pequenas melhorias de código",
-	  "nl": "Wachtwoord encryptie actief, kleine code verbeteringen",
-	  "fr": "Chiffrement du mot de passe actif, améliorations mineures du code",
-	  "it": "Crittografia di password attiva, miglioramenti di codice minori",
-	  "es": "Cifrado de contraseña activo, mejoras menores de código",
-	  "pl": "Hasło szyfrowanie aktywne, drobne ulepszenia kodu",
-	  "uk": "Захист паролів активні, незначні покращення коду",
-	  "zh-cn": "密码加密活动, 小代码改进"
-      }
+		"1.0.10": {
+		  "en": "Updating dependencies, fixed minor issues",
+		  "de": "Aktualisierung der Abhängigkeiten, Behebung kleinerer Probleme",
+		  "ru": "Обновлены зависимости, устранены незначительные проблемы",
+		  "pt": "Atualização das dependências, correção de pequenos problemas",
+		  "nl": "Afhankelijkheden bijgewerkt, kleine problemen verholpen",
+		  "fr": "Mise à jour des dépendances, correction de problèmes mineurs",
+		  "it": "Aggiornamento delle dipendenze, risoluzione di problemi minori",
+		  "es": "Actualización de dependencias y corrección de pequeños problemas",
+		  "pl": "Zaktualizowano zależności, usunięto drobne błędy",
+		  "uk": "Оновлено залежності, виправлено дрібні помилки",
+		  "zh-cn": "Updating dependencies, fixed minor issues"
+		},		
+		"1.0.9": {
+		  "en": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11",
+		  "de": "Aktualisierung der Abhängigkeiten, min version admin >= 7.6.17, js-controller >= 6.0.11",
+		  "ru": "Обновление зависимостей, min версия admin >= 7.6.17, js-controller >= 6.0.11",
+		  "pt": "Atualizar dependências, versão mínima admin >= 7.6.17, js-controller >= 6.0.11",
+		  "nl": "Afhankelijkheden bijwerken, min versie admin >= 7.6.17, js-controller >= 6.0.11",
+		  "fr": "Mise à jour des dépendances, version min admin >= 7.6.17, js-controller >= 6.0.11",
+		  "it": "Aggiornamento delle dipendenze, versione min admin >= 7.6.17, js-controller >= 6.0.11",
+		  "es": "Actualizando dependencias, versión min admin >= 7.6.17, js-controller >= 6.0.11",
+		  "pl": "Aktualizacja zależności, min wersja admin >= 7.6.17, js-controller >= 6.0.11",
+		  "uk": "Оновлення залежностей, мінімальна версія admin >= 7.6.17, js-controller >= 6.0.11",
+		  "zh-cn": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11"
+		},
+		"1.0.8": {
+		  "en": "Updating dependencies, min version admin >=7.4.10",
+		  "de": "Aktualisierung der Abhängigkeiten, Mindestversion admin >=7.4.10",
+		  "ru": "Обновление зависимостей, min версия admin >=7.4.10",
+		  "pt": "Atualização das dependências, versão mínima admin >=7.4.10",
+		  "nl": "Afhankelijkheden bijwerken, min versie admin >=7.4.10",
+		  "fr": "Mise à jour des dépendances, version min admin >=7.4.10",
+		  "it": "Aggiornamento delle dipendenze, versione minima admin >=7.4.10",
+		  "es": "Actualizando dependencias, versión min admin >=7.4.10",
+		  "pl": "Aktualizacja zależności, min. wersja admin >=7.4.10",
+		  "uk": "Оновлення залежностей, мінімальна версія admin >=7.4.10",
+		  "zh-cn": "Updating dependencies, min version admin >=7.4.10"
+		},
+		"1.0.7": {
+		  "en": "Fully implemented responsive design, minor adjustments",
+		  "de": "Vollständig implementiertes responsives Design, kleinere Anpassungen",
+		  "ru": "Полностью реализованный отзывчивый дизайн, незначительные корректировки",
+		  "pt": "Design responsivo totalmente implementado, pequenos ajustes",
+		  "nl": "Volledig geïmplementeerd responsief ontwerp, kleine aanpassingen",
+		  "fr": "Conception réactive entièrement mise en œuvre, ajustements mineurs",
+		  "it": "Design responsive completamente implementato, piccole modifiche",
+		  "es": "Diseño responsive totalmente implementado, ajustes menores",
+		  "pl": "W pełni zaimplementowany responsywny design, drobne poprawki",
+		  "uk": "Повністю реалізовано адаптивний дизайн, незначні коригування",
+		  "zh-cn": "Fully implemented responsive design, minor adjustments"
+		},
+		"1.0.6": {
+		  "en": "Improved object definition, new icon",
+		  "de": "Verbesserte Objektdefinition, neues Logo",
+		  "ru": "Улучшенное определение объекта, новая икона",
+		  "pt": "Melhor definição de objeto, novo ícone",
+		  "nl": "Verbeterde objectdefinitie, nieuw pictogram",
+		  "fr": "Définition améliorée de l'objet, nouvelle icône",
+		  "it": "Definizione degli oggetti migliorata, nuova icona",
+		  "es": "Mejor definición de objeto, nuevo icono",
+		  "pl": "Ulepszona definicja obiektu, nowa ikona",
+		  "uk": "Покращення визначення об'єкта, нова ікона",
+		  "zh-cn": "改进对象定义, 新图标"
+		}
     },
     "titleLang": {
       "en": "EgiGeoZone2",
@@ -142,6 +129,7 @@
     "dataSource": "push",
     "tier": 2,
     "compact": true,
+	"common.compact": false,
     "dependencies": [
       {
         "js-controller": ">=6.0.11"

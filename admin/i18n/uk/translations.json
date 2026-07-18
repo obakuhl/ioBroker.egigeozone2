@@ -13,5 +13,13 @@
     "port": "порт",
     "ssl": "истовуйте SSL (https://)",
     "user": "м'я користувача",
-    "ignoreLeaving": "Ігнорація"
+    "ignoreLeaving": "Ігнорація",
+	"Let's Encrypt SSL": "SSL-сертифікат Let's Encrypt",
+	"Read about Let's Encrypt certificates": "Дізнайтеся про сертифікати Let's Encrypt",
+	"Main settings": "Основні налаштування",
+	"Authentication": "Аутентифікація",
+	"Chained certificate": "Chained certificate",
+	"Private certificate": "Private certificate",
+	"Public certificate": "Public certificate",
+	"Secure (HTTPS)": "Захист сервера (HTTPS)"
 }

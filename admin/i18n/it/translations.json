@@ -13,5 +13,13 @@
     "port": "Porta",
     "ssl": "Usa SSL (https://)",
     "user": "Utente",
-    "ignoreLeaving": "Ignora la partenza"
+    "ignoreLeaving": "Ignora la partenza",
+	"Let's Encrypt SSL": "Let's Encrypt SSL",
+	"Read about Let's Encrypt certificates": "Scopri di più sui certificati Let's Encrypt",
+	"Main settings": "Impostazioni principali",
+	"Authentication": "Autenticazione",
+	"Chained certificate": "Chained certificate",
+	"Private certificate": "Private certificate",
+	"Public certificate": "Public certificate",
+	"Secure (HTTPS)": "Protezione (HTTPS)"
 }

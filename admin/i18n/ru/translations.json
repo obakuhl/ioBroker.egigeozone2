@@ -13,5 +13,13 @@
     "port": "Порт",
     "ssl": "Использовать SSL(https://)",
     "user": "Пользователь",
-    "ignoreLeaving": "Игнорировать уход"
+    "ignoreLeaving": "Игнорировать уход",
+	"Let's Encrypt SSL": "SSL-сертификаты Let's Encrypt",
+	"Read about Let's Encrypt certificates": "Узнайте о сертификатах Let's Encrypt",
+	"Main settings": "Основные настройки",
+	"Authentication": "Аутентификация",
+	"Chained certificate": "Chained certificate",
+	"Private certificate": "Private certificate",
+	"Public certificate": "Public certificate",
+	"Secure (HTTPS)": "Защита сервера (HTTPS)"
 }

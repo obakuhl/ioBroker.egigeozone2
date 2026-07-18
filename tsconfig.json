@@ -1,0 +1,19 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "ESNext",
+        "noEmit": true,
+        "noEmitOnError": true,
+        "module": "ES2020",
+        "moduleResolution": "node",
+        "rootDir": "./src/",
+        "outDir": "build/esm",
+        "ignoreDeprecations": "6.0",
+        "removeComments": false,
+        "strict": true,
+        "sourceMap": false,
+        "inlineSourceMap": false
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["build/**", "node_modules/**"]
+}
