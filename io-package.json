@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "egigeozone2",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "news": { 
 		"1.0.10": {
 		  "en": "Updating dependencies, fixed minor issues",
