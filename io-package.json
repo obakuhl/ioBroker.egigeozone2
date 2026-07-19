@@ -128,8 +128,7 @@
     "connectionType": "cloud",
     "dataSource": "push",
     "tier": 2,
-    "compact": true,
-	"common.compact": false,
+    "compact": false,
     "dependencies": [
       {
         "js-controller": ">=6.0.11"
