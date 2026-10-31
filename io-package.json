@@ -1,276 +1,269 @@
 {
-  "common": {
-    "name": "egigeozone2",
-    "version": "1.0.10",
-    "news": { 
-		"1.0.10": {
-		  "en": "Updating dependencies, fixed minor issues",
-		  "de": "Aktualisierung der Abhängigkeiten, Behebung kleinerer Probleme",
-		  "ru": "Обновлены зависимости, устранены незначительные проблемы",
-		  "pt": "Atualização das dependências, correção de pequenos problemas",
-		  "nl": "Afhankelijkheden bijgewerkt, kleine problemen verholpen",
-		  "fr": "Mise à jour des dépendances, correction de problèmes mineurs",
-		  "it": "Aggiornamento delle dipendenze, risoluzione di problemi minori",
-		  "es": "Actualización de dependencias y corrección de pequeños problemas",
-		  "pl": "Zaktualizowano zależności, usunięto drobne błędy",
-		  "uk": "Оновлено залежності, виправлено дрібні помилки",
-		  "zh-cn": "Updating dependencies, fixed minor issues"
-		},		
-		"1.0.9": {
-		  "en": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11",
-		  "de": "Aktualisierung der Abhängigkeiten, min version admin >= 7.6.17, js-controller >= 6.0.11",
-		  "ru": "Обновление зависимостей, min версия admin >= 7.6.17, js-controller >= 6.0.11",
-		  "pt": "Atualizar dependências, versão mínima admin >= 7.6.17, js-controller >= 6.0.11",
-		  "nl": "Afhankelijkheden bijwerken, min versie admin >= 7.6.17, js-controller >= 6.0.11",
-		  "fr": "Mise à jour des dépendances, version min admin >= 7.6.17, js-controller >= 6.0.11",
-		  "it": "Aggiornamento delle dipendenze, versione min admin >= 7.6.17, js-controller >= 6.0.11",
-		  "es": "Actualizando dependencias, versión min admin >= 7.6.17, js-controller >= 6.0.11",
-		  "pl": "Aktualizacja zależności, min wersja admin >= 7.6.17, js-controller >= 6.0.11",
-		  "uk": "Оновлення залежностей, мінімальна версія admin >= 7.6.17, js-controller >= 6.0.11",
-		  "zh-cn": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11"
-		},
-		"1.0.8": {
-		  "en": "Updating dependencies, min version admin >=7.4.10",
-		  "de": "Aktualisierung der Abhängigkeiten, Mindestversion admin >=7.4.10",
-		  "ru": "Обновление зависимостей, min версия admin >=7.4.10",
-		  "pt": "Atualização das dependências, versão mínima admin >=7.4.10",
-		  "nl": "Afhankelijkheden bijwerken, min versie admin >=7.4.10",
-		  "fr": "Mise à jour des dépendances, version min admin >=7.4.10",
-		  "it": "Aggiornamento delle dipendenze, versione minima admin >=7.4.10",
-		  "es": "Actualizando dependencias, versión min admin >=7.4.10",
-		  "pl": "Aktualizacja zależności, min. wersja admin >=7.4.10",
-		  "uk": "Оновлення залежностей, мінімальна версія admin >=7.4.10",
-		  "zh-cn": "Updating dependencies, min version admin >=7.4.10"
-		},
-		"1.0.7": {
-		  "en": "Fully implemented responsive design, minor adjustments",
-		  "de": "Vollständig implementiertes responsives Design, kleinere Anpassungen",
-		  "ru": "Полностью реализованный отзывчивый дизайн, незначительные корректировки",
-		  "pt": "Design responsivo totalmente implementado, pequenos ajustes",
-		  "nl": "Volledig geïmplementeerd responsief ontwerp, kleine aanpassingen",
-		  "fr": "Conception réactive entièrement mise en œuvre, ajustements mineurs",
-		  "it": "Design responsive completamente implementato, piccole modifiche",
-		  "es": "Diseño responsive totalmente implementado, ajustes menores",
-		  "pl": "W pełni zaimplementowany responsywny design, drobne poprawki",
-		  "uk": "Повністю реалізовано адаптивний дизайн, незначні коригування",
-		  "zh-cn": "Fully implemented responsive design, minor adjustments"
-		},
-		"1.0.6": {
-		  "en": "Improved object definition, new icon",
-		  "de": "Verbesserte Objektdefinition, neues Logo",
-		  "ru": "Улучшенное определение объекта, новая икона",
-		  "pt": "Melhor definição de objeto, novo ícone",
-		  "nl": "Verbeterde objectdefinitie, nieuw pictogram",
-		  "fr": "Définition améliorée de l'objet, nouvelle icône",
-		  "it": "Definizione degli oggetti migliorata, nuova icona",
-		  "es": "Mejor definición de objeto, nuevo icono",
-		  "pl": "Ulepszona definicja obiektu, nowa ikona",
-		  "uk": "Покращення визначення об'єкта, нова ікона",
-		  "zh-cn": "改进对象定义, 新图标"
-		}
-    },
-    "titleLang": {
-      "en": "EgiGeoZone2",
-      "de": "EgiGeoZone2",
-      "ru": "EgiGeoZone2",
-      "pt": "EgiGeoZone2",
-      "nl": "EgiGeoZone2",
-      "fr": "EgiGeoZone2",
-      "it": "EgiGeoZone2",
-      "es": "EgiGeoZone2",
-      "pl": "EgiGeoZone2",
-      "uk": "EgiGeoZone2",
-      "zh-cn": "EgiGeoZone2"
-    },
-    "desc": {
-      "en": "listening for EgiGeoZone events. Based on the location based mobile App (EgiGeoZone)",
-      "de": "Hört auf EgiGeoZone-Ereignisse. Basierend auf der standortbasierten mobilen App (EgiGeoZone)",
-      "ru": "прослушивание событий EgiGeoZone. На основе местоположения мобильного приложения (EgiGeoZone)",
-      "pt": "ouvir eventos EgiGeoZone. Baseado no aplicativo móvel baseado na localização (EgiGeoZone)",
-      "nl": "luisteren naar EgiGeoZone evenementen. Gebaseerd op de mobiele App op locatie (EgiGeoZone)",
-      "fr": "écouter les événements EgiGeoZone. Basé sur l'application mobile basée sur l'emplacement (EgiGeoZone)",
-      "it": "ascoltare gli eventi di EgiGeoZone. Sulla base della posizione basata mobile App (EgiGeoZone)",
-      "es": "escuchar eventos de EgiGeoZone. Basado en la aplicación móvil basada en la ubicación (EgiGeoZone)",
-      "pl": "słuchanie EgiGeoZone. Na podstawie lokalizacji aplikacji mobilnej (EgiGeoZone)",
-      "uk": "прослуховування подій EgiGeoZone. На основі місцезнаходження на основі мобільного додатку (EgiGeoZone)",
-      "zh-cn": "聆听EgiGeoZone事件。 基于基于位置的移动App(EgiGeoZone)"
-    },
-    "platform": "Javascript/Node.js",
-    "mode": "daemon",
-    "icon": "egigeozone.png",
-    "extIcon": "https://raw.githubusercontent.com/obakuhl/ioBroker.egigeozone2/master/admin/egigeozone.png",
-    "readme": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
-    "licenseInformation": {
-		"type": "free",
-		"license": "MIT"
-	},
-    "type": "geoposition",
-    "keywords": [
-      "server",
-      "egigeozone",
-      "mobile app",
-	  "geofencing"
-    ],
-    "loglevel": "info",
-    "enabled": true,
-	"localLinks": {
-        "_default": {
-            "link": "http://%ip%:%port%",
-            "pro": true
-        }
-    },
-    "supportedMessages": {
-	"custom": true
-    },
-    "authors": [
-		"obakuhl <hello@obakuhl.com>"
-    ],
-    "connectionType": "cloud",
-    "dataSource": "push",
-    "tier": 2,
-    "compact": false,
-    "dependencies": [
-      {
-        "js-controller": ">=6.0.11"
-      }
-    ],
-    "globalDependencies": [
-      {
-        "admin": ">=7.6.20"
-      }
-    ],
-    "plugins": {
-      "sentry": {
-        "dsn": "https://3b07484534f087c2e7fe38b52ae4bb8b@o4507203554836480.ingest.de.sentry.io/4507203585048656"
-      }
-    },
-    "adminUI": {
-      "config": "json"
-    },
-    "messages": [
-      {
-        "condition": {
-          "operand": "and",
-          "rules": [
-            "oldVersion<=1.0.3",
-            "newVersion>=1.0.4"
-          ]
+    "common": {
+        "name": "egigeozone2",
+        "version": "1.0.11",
+        "news": {
+            "1.0.11": {
+                "en": "Updating dependencies",
+                "de": "Aktualisierung der Abhängigkeiten, Behebung kleinerer Probleme",
+                "ru": "Обновлены зависимости, устранены незначительные проблемы",
+                "pt": "Atualização das dependências, correção de pequenos problemas",
+                "nl": "Afhankelijkheden bijgewerkt, kleine problemen verholpen",
+                "fr": "Mise à jour des dépendances, correction de problèmes mineurs",
+                "it": "Aggiornamento delle dipendenze, risoluzione di problemi minori",
+                "es": "Actualización de dependencias y corrección de pequeños problemas",
+                "pl": "Zaktualizowano zależności, usunięto drobne błędy",
+                "uk": "Оновлено залежності, виправлено дрібні помилки",
+                "zh-cn": "Updating dependencies, fixed minor issues"
+            },
+            "1.0.10": {
+                "en": "Updating dependencies, fixed minor issues",
+                "de": "Aktualisierung der Abhängigkeiten, Behebung kleinerer Probleme",
+                "ru": "Обновлены зависимости, устранены незначительные проблемы",
+                "pt": "Atualização das dependências, correção de pequenos problemas",
+                "nl": "Afhankelijkheden bijgewerkt, kleine problemen verholpen",
+                "fr": "Mise à jour des dépendances, correction de problèmes mineurs",
+                "it": "Aggiornamento delle dipendenze, risoluzione di problemi minori",
+                "es": "Actualización de dependencias y corrección de pequeños problemas",
+                "pl": "Zaktualizowano zależności, usunięto drobne błędy",
+                "uk": "Оновлено залежності, виправлено дрібні помилки",
+                "zh-cn": "Updating dependencies, fixed minor issues"
+            },
+            "1.0.9": {
+                "en": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11",
+                "de": "Aktualisierung der Abhängigkeiten, min version admin >= 7.6.17, js-controller >= 6.0.11",
+                "ru": "Обновление зависимостей, min версия admin >= 7.6.17, js-controller >= 6.0.11",
+                "pt": "Atualizar dependências, versão mínima admin >= 7.6.17, js-controller >= 6.0.11",
+                "nl": "Afhankelijkheden bijwerken, min versie admin >= 7.6.17, js-controller >= 6.0.11",
+                "fr": "Mise à jour des dépendances, version min admin >= 7.6.17, js-controller >= 6.0.11",
+                "it": "Aggiornamento delle dipendenze, versione min admin >= 7.6.17, js-controller >= 6.0.11",
+                "es": "Actualizando dependencias, versión min admin >= 7.6.17, js-controller >= 6.0.11",
+                "pl": "Aktualizacja zależności, min wersja admin >= 7.6.17, js-controller >= 6.0.11",
+                "uk": "Оновлення залежностей, мінімальна версія admin >= 7.6.17, js-controller >= 6.0.11",
+                "zh-cn": "Updating dependencies, min version admin >= 7.6.17, js-controller >= 6.0.11"
+            },
+            "1.0.8": {
+                "en": "Updating dependencies, min version admin >=7.4.10",
+                "de": "Aktualisierung der Abhängigkeiten, Mindestversion admin >=7.4.10",
+                "ru": "Обновление зависимостей, min версия admin >=7.4.10",
+                "pt": "Atualização das dependências, versão mínima admin >=7.4.10",
+                "nl": "Afhankelijkheden bijwerken, min versie admin >=7.4.10",
+                "fr": "Mise à jour des dépendances, version min admin >=7.4.10",
+                "it": "Aggiornamento delle dipendenze, versione minima admin >=7.4.10",
+                "es": "Actualizando dependencias, versión min admin >=7.4.10",
+                "pl": "Aktualizacja zależności, min. wersja admin >=7.4.10",
+                "uk": "Оновлення залежностей, мінімальна версія admin >=7.4.10",
+                "zh-cn": "Updating dependencies, min version admin >=7.4.10"
+            },
+            "1.0.7": {
+                "en": "Fully implemented responsive design, minor adjustments",
+                "de": "Vollständig implementiertes responsives Design, kleinere Anpassungen",
+                "ru": "Полностью реализованный отзывчивый дизайн, незначительные корректировки",
+                "pt": "Design responsivo totalmente implementado, pequenos ajustes",
+                "nl": "Volledig geïmplementeerd responsief ontwerp, kleine aanpassingen",
+                "fr": "Conception réactive entièrement mise en œuvre, ajustements mineurs",
+                "it": "Design responsive completamente implementato, piccole modifiche",
+                "es": "Diseño responsive totalmente implementado, ajustes menores",
+                "pl": "W pełni zaimplementowany responsywny design, drobne poprawki",
+                "uk": "Повністю реалізовано адаптивний дизайн, незначні коригування",
+                "zh-cn": "Fully implemented responsive design, minor adjustments"
+            }
         },
-        "title": {
-          "en": "Important notice!",
-          "de": "Wichtiger Hinweis!",
-          "ru": "Важное замечание!",
-          "pt": "Notícia importante!",
-          "nl": "Belangrijke mededeling!",
-          "fr": "Avis important!",
-          "it": "Avviso IMPORTANTE!",
-          "es": "Noticia importante!",
-          "pl": "Ważna uwaga!",
-          "zh-cn": "重要通知!"
+        "titleLang": {
+            "en": "EgiGeoZone2",
+            "de": "EgiGeoZone2",
+            "ru": "EgiGeoZone2",
+            "pt": "EgiGeoZone2",
+            "nl": "EgiGeoZone2",
+            "fr": "EgiGeoZone2",
+            "it": "EgiGeoZone2",
+            "es": "EgiGeoZone2",
+            "pl": "EgiGeoZone2",
+            "uk": "EgiGeoZone2",
+            "zh-cn": "EgiGeoZone2"
         },
-        "text": {
-	  "en": "As password encryption has been activated, the password must be entered again in the settings.",
-	  "de": "Da die Passwortverschlüsselung aktiviert wurde, muss das Kennwort in den Einstellungen erneut eingegeben werden.",
-	  "ru": "Поскольку шифрование паролей активировано, пароль должен быть введен снова в настройках.",
-	  "pt": "Como a criptografia de senha foi ativada, a senha deve ser inserida novamente nas configurações.",
-	  "nl": "Aangezien wachtwoordencryptie is geactiveerd, moet het wachtwoord opnieuw worden ingevoerd in de instellingen.",
-	  "fr": "Comme le chiffrement du mot de passe a été activé, le mot de passe doit être à nouveau entré dans les paramètres.",
-	  "it": "Poiché la crittografia della password è stata attivata, la password deve essere nuovamente inserita nelle impostazioni.",
-	  "es": "Como se ha activado el cifrado de contraseñas, la contraseña debe introducirse de nuevo en los ajustes.",
-	  "pl": "Po uruchomieniu szyfrowania hasła, hasło musi być ponownie wprowadzone do ustawień.",
-	  "uk": "Як активовано шифрування пароля, пароль потрібно вводити знову в налаштуваннях.",
-	  "zh-cn": "由于密码加密已经激活,必须在设置中再次输入密码."
+        "desc": {
+            "en": "listening for EgiGeoZone events. Based on the location based mobile App (EgiGeoZone)",
+            "de": "Hört auf EgiGeoZone-Ereignisse. Basierend auf der standortbasierten mobilen App (EgiGeoZone)",
+            "ru": "прослушивание событий EgiGeoZone. На основе местоположения мобильного приложения (EgiGeoZone)",
+            "pt": "ouvir eventos EgiGeoZone. Baseado no aplicativo móvel baseado na localização (EgiGeoZone)",
+            "nl": "luisteren naar EgiGeoZone evenementen. Gebaseerd op de mobiele App op locatie (EgiGeoZone)",
+            "fr": "écouter les événements EgiGeoZone. Basé sur l'application mobile basée sur l'emplacement (EgiGeoZone)",
+            "it": "ascoltare gli eventi di EgiGeoZone. Sulla base della posizione basata mobile App (EgiGeoZone)",
+            "es": "escuchar eventos de EgiGeoZone. Basado en la aplicación móvil basada en la ubicación (EgiGeoZone)",
+            "pl": "słuchanie EgiGeoZone. Na podstawie lokalizacji aplikacji mobilnej (EgiGeoZone)",
+            "uk": "прослуховування подій EgiGeoZone. На основі місцезнаходження на основі мобільного додатку (EgiGeoZone)",
+            "zh-cn": "聆听EgiGeoZone事件。 基于基于位置的移动App(EgiGeoZone)"
         },
-        "link": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
-        "level": "warn",
-        "linkText": {
-          "en": "Readme",
-          "de": "Liesmich",
-          "ru": "Прочти меня",
-          "pt": "Leia-me",
-          "nl": "Leesmij",
-          "fr": "Lisez-moi",
-          "it": "Leggimi",
-          "es": "Léame",
-          "pl": "Readme",
-          "zh-cn": "自述文件"
+        "platform": "Javascript/Node.js",
+        "mode": "daemon",
+        "icon": "egigeozone.png",
+        "extIcon": "https://raw.githubusercontent.com/obakuhl/ioBroker.egigeozone2/master/admin/egigeozone.png",
+        "readme": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
+        "licenseInformation": {
+            "type": "free",
+            "license": "MIT"
         },
-        "buttons": [
-          "agree",
-          "cancel"
+        "type": "geoposition",
+        "keywords": [
+            "server",
+            "egigeozone",
+            "mobile app",
+            "geofencing"
+        ],
+        "loglevel": "info",
+        "enabled": true,
+        "localLinks": {
+            "_default": {
+                "link": "http://%ip%:%port%",
+                "pro": true
+            }
+        },
+        "supportedMessages": {
+            "custom": true
+        },
+        "authors": [
+            "obakuhl <hello@obakuhl.com>"
+        ],
+        "connectionType": "cloud",
+        "dataSource": "push",
+        "tier": 2,
+        "compact": false,
+        "dependencies": [{
+                "js-controller": ">=6.0.11"
+            }
+        ],
+        "globalDependencies": [{
+                "admin": ">=7.6.20"
+            }
+        ],
+        "plugins": {
+            "sentry": {
+                "dsn": "https://3b07484534f087c2e7fe38b52ae4bb8b@o4507203554836480.ingest.de.sentry.io/4507203585048656"
+            }
+        },
+        "adminUI": {
+            "config": "json"
+        },
+        "messages": [{
+                "condition": {
+                    "operand": "and",
+                    "rules": [
+                        "oldVersion<=1.0.3",
+                        "newVersion>=1.0.4"
+                    ]
+                },
+                "title": {
+                    "en": "Important notice!",
+                    "de": "Wichtiger Hinweis!",
+                    "ru": "Важное замечание!",
+                    "pt": "Notícia importante!",
+                    "nl": "Belangrijke mededeling!",
+                    "fr": "Avis important!",
+                    "it": "Avviso IMPORTANTE!",
+                    "es": "Noticia importante!",
+                    "pl": "Ważna uwaga!",
+                    "zh-cn": "重要通知!"
+                },
+                "text": {
+                    "en": "As password encryption has been activated, the password must be entered again in the settings.",
+                    "de": "Da die Passwortverschlüsselung aktiviert wurde, muss das Kennwort in den Einstellungen erneut eingegeben werden.",
+                    "ru": "Поскольку шифрование паролей активировано, пароль должен быть введен снова в настройках.",
+                    "pt": "Como a criptografia de senha foi ativada, a senha deve ser inserida novamente nas configurações.",
+                    "nl": "Aangezien wachtwoordencryptie is geactiveerd, moet het wachtwoord opnieuw worden ingevoerd in de instellingen.",
+                    "fr": "Comme le chiffrement du mot de passe a été activé, le mot de passe doit être à nouveau entré dans les paramètres.",
+                    "it": "Poiché la crittografia della password è stata attivata, la password deve essere nuovamente inserita nelle impostazioni.",
+                    "es": "Como se ha activado el cifrado de contraseñas, la contraseña debe introducirse de nuevo en los ajustes.",
+                    "pl": "Po uruchomieniu szyfrowania hasła, hasło musi być ponownie wprowadzone do ustawień.",
+                    "uk": "Як активовано шифрування пароля, пароль потрібно вводити знову в налаштуваннях.",
+                    "zh-cn": "由于密码加密已经激活,必须在设置中再次输入密码."
+                },
+                "link": "https://github.com/obakuhl/ioBroker.egigeozone2/blob/master/README.md",
+                "level": "warn",
+                "linkText": {
+                    "en": "Readme",
+                    "de": "Liesmich",
+                    "ru": "Прочти меня",
+                    "pt": "Leia-me",
+                    "nl": "Leesmij",
+                    "fr": "Lisez-moi",
+                    "it": "Leggimi",
+                    "es": "Léame",
+                    "pl": "Readme",
+                    "zh-cn": "自述文件"
+                },
+                "buttons": [
+                    "agree",
+                    "cancel"
+                ]
+            }
         ]
-      }
+    },
+    "native": {
+        "activate_server": true,
+        "bind": "0.0.0.0",
+        "ttl": 3600,
+        "port": 7999,
+        "secure": false,
+        "certPublic": "",
+        "certPrivate": "",
+        "certChained": "",
+        "user": "geo",
+        "pass": "geo",
+        "atHome": "Home"
+    },
+    "encryptedNative": [
+        "pass"
+    ],
+    "protectedNative": [
+        "pass"
+    ],
+    "objects": [],
+    "instanceObjects": [{
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        }, {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Server Adapter is ready to get data",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }, {
+            "_id": "atHome",
+            "type": "state",
+            "common": {
+                "name": "atHome",
+                "type": "string",
+                "role": "state",
+                "read": true,
+                "write": false,
+                "def": "",
+                "desc": "Present persons"
+            },
+            "native": {}
+        }, {
+            "_id": "atHomeCount",
+            "type": "state",
+            "common": {
+                "name": "atHomeCount",
+                "type": "number",
+                "role": "state",
+                "read": true,
+                "write": false,
+                "def": 0,
+                "desc": "Number of present persons"
+            },
+            "native": {}
+        }
     ]
-  },
-  "native": {
-    "activate_server": true,
-    "bind": "0.0.0.0",
-    "ttl": 3600,
-    "port": 7999,
-    "secure": false,
-    "certPublic": "",
-    "certPrivate": "",
-    "certChained": "",
-    "user": "geo",
-    "pass": "geo",
-    "atHome": "Home"
-  },
-  "encryptedNative": [
-    "pass"
-  ],
-  "protectedNative": [
-    "pass"
-  ],
-  "objects": [],
-  "instanceObjects": [
-    {
-      "_id": "info",
-      "type": "channel",
-      "common": {
-        "name": "Information"
-      },
-      "native": {}
-    },
-    {
-      "_id": "info.connection",
-      "type": "state",
-      "common": {
-        "role": "indicator.connected",
-        "name": "Server Adapter is ready to get data",
-        "type": "boolean",
-        "read": true,
-        "write": false,
-        "def": false
-      },
-      "native": {}
-    },
-    {
-      "_id": "atHome",
-      "type": "state",
-      "common": {
-        "name": "atHome",
-        "type": "string",
-        "role": "state",
-        "read": true,
-        "write": false,
-        "def": "",
-        "desc": "Present persons"
-      },
-      "native": {}
-    },
-    {
-      "_id": "atHomeCount",
-      "type": "state",
-      "common": {
-        "name": "atHomeCount",
-        "type": "number",
-        "role": "state",
-        "read": true,
-        "write": false,
-        "def": 0,
-        "desc": "Number of present persons"
-      },
-      "native": {}
-    }
-  ]
 }
